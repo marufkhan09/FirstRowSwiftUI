@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  FirstRowSwiftUI
 //
 //  Created by Maruf Khan on 7/8/24.
@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    
+struct HomeView: View {
     var body: some View {
-        TabViiew()
+        Text("Home!")
     }
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }
