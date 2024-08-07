@@ -40,5 +40,5 @@ struct TabViiew: View {
 }
 
 #Preview {
-    TabViiew()
+    TabViiew().environmentObject(AppSettings())
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2A21A32C63CD98007E98E7 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A22C63CD98007E98E7 /* GamesListView.swift */; };
+		CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */; };
 		CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */; };
 		CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8942C63A78C0067D2A5 /* ContentView.swift */; };
 		CA2AC8972C63A7900067D2A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA2AC8962C63A7900067D2A5 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D62C63B6B40067D2A5 /* Color.swift */; };
 		CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D82C63C0D40067D2A5 /* TabModel.swift */; };
 		CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8DA2C63C0F00067D2A5 /* CustomTabBar.swift */; };
+		CA3D44362C63F10900995651 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44352C63F10900995651 /* AppSettings.swift */; };
+		CA3D44382C64082F00995651 /* navModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44372C64082F00995651 /* navModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA2A21A22C63CD98007E98E7 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
+		CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstRowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowSwiftUIApp.swift; sourceTree = "<group>"; };
 		CA2AC8942C63A78C0067D2A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 		CA2AC8D62C63B6B40067D2A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		CA2AC8D82C63C0D40067D2A5 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		CA2AC8DA2C63C0F00067D2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		CA3D44352C63F10900995651 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		CA3D44372C64082F00995651 /* navModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2A21A42C63CDBC007E98E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA2AC8D22C63B15F0067D2A5 /* TabView */,
+				CA2AC8CF2C63B0D10067D2A5 /* Special */,
+				CA2AC8CC2C63B06B0067D2A5 /* Chat */,
+				CA2AC8C92C63B0590067D2A5 /* News */,
+				CA2AC8C62C63B0380067D2A5 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA2A21A62C63CDDB007E98E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CA2AC8862C63A78C0067D2A5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +145,10 @@
 		CA2AC8912C63A78C0067D2A5 /* FirstRowSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CA3D44342C63F0F400995651 /* Utils */,
+				CA2A21A62C63CDDB007E98E7 /* Models */,
+				CA2A21A42C63CDBC007E98E7 /* Views */,
 				CA2AC8D52C63B69E0067D2A5 /* Extensions */,
-				CA2AC8D22C63B15F0067D2A5 /* TabView */,
-				CA2AC8CF2C63B0D10067D2A5 /* Special */,
-				CA2AC8CC2C63B06B0067D2A5 /* Chat */,
-				CA2AC8C92C63B0590067D2A5 /* News */,
-				CA2AC8C62C63B0380067D2A5 /* Home */,
 				CA2AC8C12C63A9E50067D2A5 /* Assets */,
 				CA2AC8BE2C63A92F0067D2A5 /* Resources */,
 				CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */,
@@ -178,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2AC8C72C63B0520067D2A5 /* HomeView.swift */,
+				CA2A21A22C63CD98007E98E7 /* GamesListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +249,15 @@
 				CA2AC8D62C63B6B40067D2A5 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CA3D44342C63F0F400995651 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D44352C63F10900995651 /* AppSettings.swift */,
+				CA3D44372C64082F00995651 /* navModifier.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,13 +394,17 @@
 			files = (
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
+				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
+				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
 				CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */,
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
 				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
+				CA2A21A32C63CD98007E98E7 /* GamesListView.swift in Sources */,
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
+				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
 			);
