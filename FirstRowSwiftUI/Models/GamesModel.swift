@@ -6,11 +6,17 @@
 //
 import SwiftUI
 
-struct GamesModel: Identifiable {
-    let id = UUID() // or any other unique identifier
-    let name: String
-    let imageName: String
+struct GamesModel: Identifiable, Equatable {
+    var id: UUID = UUID()
+    var name: String
+    var imageName: String
     var isSelected: Bool = false
+    
+    // Conform to Equatable by implementing == operator
+    static func == (lhs: GamesModel, rhs: GamesModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
+
 
 

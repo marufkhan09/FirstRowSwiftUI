@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA2A21A32C63CD98007E98E7 /* GamesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A22C63CD98007E98E7 /* GamesListView.swift */; };
 		CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */; };
 		CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */; };
 		CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8942C63A78C0067D2A5 /* ContentView.swift */; };
@@ -29,6 +28,11 @@
 		CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8DA2C63C0F00067D2A5 /* CustomTabBar.swift */; };
 		CA3D44362C63F10900995651 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44352C63F10900995651 /* AppSettings.swift */; };
 		CA3D44382C64082F00995651 /* navModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44372C64082F00995651 /* navModifier.swift */; };
+		CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443A2C640E3700995651 /* HorizontalCalenderView.swift */; };
+		CA3D443E2C6410B000995651 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443D2C6410B000995651 /* GameListView.swift */; };
+		CA3D44402C6415DC00995651 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443F2C6415DC00995651 /* DateButton.swift */; };
+		CA3D44422C641BAF00995651 /* GameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44412C641BAF00995651 /* GameDataManager.swift */; };
+		CA3D44442C642C5900995651 /* ListBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44432C642C5900995651 /* ListBack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA2A21A22C63CD98007E98E7 /* GamesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListView.swift; sourceTree = "<group>"; };
 		CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstRowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -74,6 +77,11 @@
 		CA2AC8DA2C63C0F00067D2A5 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		CA3D44352C63F10900995651 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		CA3D44372C64082F00995651 /* navModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navModifier.swift; sourceTree = "<group>"; };
+		CA3D443A2C640E3700995651 /* HorizontalCalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalenderView.swift; sourceTree = "<group>"; };
+		CA3D443D2C6410B000995651 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		CA3D443F2C6415DC00995651 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
+		CA3D44412C641BAF00995651 /* GameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataManager.swift; sourceTree = "<group>"; };
+		CA3D44432C642C5900995651 /* ListBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,8 @@
 		CA2A21A42C63CDBC007E98E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA3D443C2C6410A100995651 /* Games */,
+				CA3D44392C640E2100995651 /* Calender */,
 				CA2AC8D22C63B15F0067D2A5 /* TabView */,
 				CA2AC8CF2C63B0D10067D2A5 /* Special */,
 				CA2AC8CC2C63B06B0067D2A5 /* Chat */,
@@ -204,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				CA2AC8C72C63B0520067D2A5 /* HomeView.swift */,
-				CA2A21A22C63CD98007E98E7 /* GamesListView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -258,6 +267,25 @@
 				CA3D44372C64082F00995651 /* navModifier.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA3D44392C640E2100995651 /* Calender */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D443A2C640E3700995651 /* HorizontalCalenderView.swift */,
+				CA3D443F2C6415DC00995651 /* DateButton.swift */,
+			);
+			path = Calender;
+			sourceTree = "<group>";
+		};
+		CA3D443C2C6410A100995651 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D443D2C6410B000995651 /* GameListView.swift */,
+				CA3D44412C641BAF00995651 /* GameDataManager.swift */,
+				CA3D44432C642C5900995651 /* ListBack.swift */,
+			);
+			path = Games;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,15 +421,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
+				CA3D44442C642C5900995651 /* ListBack.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
 				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
 				CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */,
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
+				CA3D44402C6415DC00995651 /* DateButton.swift in Sources */,
 				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
-				CA2A21A32C63CD98007E98E7 /* GamesListView.swift in Sources */,
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
+				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
+				CA3D44422C641BAF00995651 /* GameDataManager.swift in Sources */,
+				CA3D443E2C6410B000995651 /* GameListView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,

@@ -11,7 +11,7 @@ import UIKit
 // Modifier for setting up the navigation bar appearance
 struct NavigationBarModifier: ViewModifier {
     
-    init(backgroundColor: UIColor = .systemBackground, foregroundColor: UIColor = .blue, tintColor: UIColor? = nil, withSeparator: Bool = true) {
+    init(backgroundColor: UIColor = .systemBackground, foregroundColor: UIColor = .blue, tintColor: UIColor? = nil, withSeparator: Bool = false) {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.titleTextAttributes = [.foregroundColor: foregroundColor]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: foregroundColor]
@@ -45,7 +45,7 @@ extension View {
          // To display our modifier in the preview or in your view is a way to see its effect.
         //.modifier(NavigationBarModifier(backgroundColor: .systemBackground, foregroundColor: .blue, tintColor: nil, withSeparator: false))
             .navigationTitle("Test title")
-            .navigationBarModifier(backgroundColor: .systemTeal, foregroundColor: .systemBlue, tintColor: nil, withSeparator: true)
+            .navigationBarModifier(backgroundColor: .systemTeal, foregroundColor: .systemBlue, tintColor: nil, withSeparator: false)
         
             
     }
