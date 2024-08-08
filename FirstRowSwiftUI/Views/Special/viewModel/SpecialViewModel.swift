@@ -1,5 +1,6 @@
 import Alamofire
 import Combine
+import SwiftUI
 
 class SpecialViewModel: ObservableObject {
     @Published var specialData: [Datum] = []
@@ -9,34 +10,27 @@ class SpecialViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     func fetchData() {
-        let url = "https://halftimepick.laravel-script.com/api/posts" // Replace with your actual API endpoint
-        
+        let url = "https://halftimepick.laravel-script.com/api/posts"
         isLoading = true
         errorMessage = nil
 
-        AF.request(url)
-            .validate()
-            .publishDecodable(type: SpecialModel.self)
-            .handleEvents(receiveOutput: { response in
-                print("Received response: \(response)")
-            })
-            .compactMap { response in
-                return response.value
-            }
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
+        NetworkManager.shared.request(
+            url,
+            method: .get,
+            completion: { (result: Result<SpecialModel, Error>) in
+                DispatchQueue.main.async {
                     self.isLoading = false
-                    print("Request finished successfully.")
+                }
+                
+                switch result {
+                case .success(let specialModel):
+                    self.specialData = specialModel.data
+                    print("Parsed data: \(specialModel.data)")
                 case .failure(let error):
-                    self.isLoading = false
                     self.errorMessage = error.localizedDescription
                     print("Request failed with error: \(error.localizedDescription)")
                 }
-            }, receiveValue: { specialModel in
-                self.specialData = specialModel.data
-                print("Parsed data: \(specialModel.data)")
-            })
-            .store(in: &cancellables)
+            }
+        )
     }
 }
