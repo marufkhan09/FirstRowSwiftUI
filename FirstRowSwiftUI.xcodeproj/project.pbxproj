@@ -33,6 +33,16 @@
 		CA3D44402C6415DC00995651 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443F2C6415DC00995651 /* DateButton.swift */; };
 		CA3D44422C641BAF00995651 /* GameDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44412C641BAF00995651 /* GameDataManager.swift */; };
 		CA3D44442C642C5900995651 /* ListBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44432C642C5900995651 /* ListBack.swift */; };
+		CA70930F2C64F900009E1A08 /* SpecialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70930E2C64F900009E1A08 /* SpecialModel.swift */; };
+		CA7093122C65022C009E1A08 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093112C65022C009E1A08 /* Interceptor.swift */; };
+		CA7093142C65026D009E1A08 /* BaseApiControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093132C65026D009E1A08 /* BaseApiControl.swift */; };
+		CA7093172C650E14009E1A08 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA7093162C650E14009E1A08 /* Alamofire */; };
+		CA7093192C650E14009E1A08 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CA7093182C650E14009E1A08 /* AlamofireDynamic */; };
+		CA70931B2C651240009E1A08 /* ConnectivityRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */; };
+		CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */; };
+		CA7093212C6512DB009E1A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093202C6512DB009E1A08 /* String.swift */; };
+		CA7093232C6528D2009E1A08 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093222C6528D2009E1A08 /* ApiManager.swift */; };
+		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +92,14 @@
 		CA3D443F2C6415DC00995651 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
 		CA3D44412C641BAF00995651 /* GameDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataManager.swift; sourceTree = "<group>"; };
 		CA3D44432C642C5900995651 /* ListBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBack.swift; sourceTree = "<group>"; };
+		CA70930E2C64F900009E1A08 /* SpecialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialModel.swift; sourceTree = "<group>"; };
+		CA7093112C65022C009E1A08 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
+		CA7093132C65026D009E1A08 /* BaseApiControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiControl.swift; sourceTree = "<group>"; };
+		CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityRequestRetrier.swift; sourceTree = "<group>"; };
+		CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
+		CA7093202C6512DB009E1A08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CA7093222C6528D2009E1A08 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7093172C650E14009E1A08 /* Alamofire in Frameworks */,
+				CA7093192C650E14009E1A08 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +146,7 @@
 		CA2A21A62C63CDDB007E98E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAC2F4BA2C65458900EB8107 /* SpecialModel */,
 				CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */,
 			);
 			path = Models;
@@ -155,6 +176,7 @@
 		CA2AC8912C63A78C0067D2A5 /* FirstRowSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CA7093102C650210009E1A08 /* Network */,
 				CA3D44342C63F0F400995651 /* Utils */,
 				CA2A21A62C63CDDB007E98E7 /* Models */,
 				CA2A21A42C63CDBC007E98E7 /* Views */,
@@ -237,7 +259,8 @@
 		CA2AC8CF2C63B0D10067D2A5 /* Special */ = {
 			isa = PBXGroup;
 			children = (
-				CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */,
+				CA70931F2C651286009E1A08 /* View */,
+				CA70931C2C65126F009E1A08 /* viewModel */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -256,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				CA2AC8D62C63B6B40067D2A5 /* Color.swift */,
+				CA7093202C6512DB009E1A08 /* String.swift */,
+				CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +313,41 @@
 			path = Games;
 			sourceTree = "<group>";
 		};
+		CA7093102C650210009E1A08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CA7093112C65022C009E1A08 /* Interceptor.swift */,
+				CA7093132C65026D009E1A08 /* BaseApiControl.swift */,
+				CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */,
+				CA7093222C6528D2009E1A08 /* ApiManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CA70931C2C65126F009E1A08 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		CA70931F2C651286009E1A08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAC2F4BA2C65458900EB8107 /* SpecialModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA70930E2C64F900009E1A08 /* SpecialModel.swift */,
+			);
+			path = SpecialModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +364,10 @@
 			dependencies = (
 			);
 			name = FirstRowSwiftUI;
+			packageProductDependencies = (
+				CA7093162C650E14009E1A08 /* Alamofire */,
+				CA7093182C650E14009E1A08 /* AlamofireDynamic */,
+			);
 			productName = FirstRowSwiftUI;
 			productReference = CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -376,6 +440,9 @@
 				Base,
 			);
 			mainGroup = CA2AC8862C63A78C0067D2A5;
+			packageReferences = (
+				CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CA2AC8902C63A78C0067D2A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -422,23 +489,31 @@
 			files = (
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
 				CA3D44442C642C5900995651 /* ListBack.swift in Sources */,
+				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
 				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
 				CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */,
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
+				CA7093142C65026D009E1A08 /* BaseApiControl.swift in Sources */,
+				CA7093232C6528D2009E1A08 /* ApiManager.swift in Sources */,
 				CA3D44402C6415DC00995651 /* DateButton.swift in Sources */,
 				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
+				CA7093122C65022C009E1A08 /* Interceptor.swift in Sources */,
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
 				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
+				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
 				CA3D44422C641BAF00995651 /* GameDataManager.swift in Sources */,
 				CA3D443E2C6410B000995651 /* GameListView.swift in Sources */,
+				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
+				CA70930F2C64F900009E1A08 /* SpecialModel.swift in Sources */,
+				CA70931B2C651240009E1A08 /* ConnectivityRequestRetrier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +845,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA7093162C650E14009E1A08 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CA7093182C650E14009E1A08 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA2AC8872C63A78C0067D2A5 /* Project object */;
 }

@@ -15,6 +15,7 @@ struct AssetNames {
         static let news = "article-line"
         static let special = "Special"
         static let statusBarLogo = "statuslogo"
+        static let mlb = "mlb"
         // Add other image names here
     }
 
