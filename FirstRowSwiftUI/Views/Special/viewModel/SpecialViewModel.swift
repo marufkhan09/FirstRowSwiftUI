@@ -1,36 +1,40 @@
-import Alamofire
-import Combine
-import SwiftUI
+import Foundation
 
 class SpecialViewModel: ObservableObject {
     @Published var specialData: [Datum] = []
-    @Published var isLoading = false
+    @Published var isLoading: Bool = false
     @Published var errorMessage: String?
 
-    private var cancellables = Set<AnyCancellable>()
-
     func fetchData() {
-        let url = "https://halftimepick.laravel-script.com/api/posts"
         isLoading = true
         errorMessage = nil
-
-        NetworkManager.shared.request(
-            url,
-            method: .get,
-            completion: { (result: Result<SpecialModel, Error>) in
-                DispatchQueue.main.async {
-                    self.isLoading = false
-                }
-                
+        
+        BaseApiController.shared.request(
+            endpoint: "posts",
+            method: .get
+        ) { result in
+            DispatchQueue.main.async {
+                self.isLoading = false
                 switch result {
-                case .success(let specialModel):
-                    self.specialData = specialModel.data
-                    print("Parsed data: \(specialModel.data)")
+                case .success(let data):
+                    do {
+                        let specialModel = try JSONDecoder().decode(SpecialModel.self, from: data)
+                        self.specialData = specialModel.data
+                    } catch {
+                        self.errorMessage = "Failed to decode data: \(error.localizedDescription)"
+                        print("Failed to decode data: \(error.localizedDescription)")
+                    }
                 case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                    print("Request failed with error: \(error.localizedDescription)")
+                    self.errorMessage = "Network request failed: \(error.localizedDescription)"
+                    print("Network request failed: \(error.localizedDescription)")
+                    self.showSnackbar(message: "Network request failed: \(error.localizedDescription)")
                 }
             }
-        )
+        }
+    }
+    
+    private func showSnackbar(message: String) {
+        // Implement this function based on your app's Snackbar or Alert system
+        print("Snackbar Message: \(message)")
     }
 }

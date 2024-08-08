@@ -1,15 +1,7 @@
-//
-//  Interceptor.swift
-//  FirstRowSwiftUI
-//
-//  Created by Maruf Khan on 8/8/24.
-//
 import Alamofire
 import Foundation
 
 class LoggingInterceptor: RequestInterceptor {
-    private let maxCharactersPerLine = 200
-
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         // Add any headers or modifications here
         completion(.success(urlRequest))
@@ -32,7 +24,7 @@ class LoggingInterceptor: RequestInterceptor {
         if let data = response.data {
             let responseString = String(data: data, encoding: .utf8) ?? ""
             let maxCharactersPerLine = 200
-            let numberOfLines = (responseString.count + maxCharactersPerLine - 1) / maxCharactersPerLine // Equivalent to ceil(responseString.count / maxCharactersPerLine)
+            let numberOfLines = (responseString.count + maxCharactersPerLine - 1) / maxCharactersPerLine
 
             for i in 0..<numberOfLines {
                 let start = i * maxCharactersPerLine

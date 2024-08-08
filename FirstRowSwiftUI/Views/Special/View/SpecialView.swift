@@ -22,18 +22,19 @@ struct SpecialView: View {
                             .foregroundStyle(.white)
                             .padding(.bottom, 8)
                             .font(.title2)
-                    }.padding(.bottom)
+                    }
+                    .padding(.bottom)
                     
                     // Scrollable content
                     ScrollView {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 10) {
                             if viewModel.isLoading {
                                 ProgressView("Loading...")
                                     .progressViewStyle(CircularProgressViewStyle())
                                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                             } else if !viewModel.specialData.isEmpty {
                                 ForEach(viewModel.specialData) { datum in
-                                    VStack(alignment: .leading) {
+                                    VStack(alignment: .leading, spacing: 10) {
                                         HStack {
                                             AsyncImage(url: URL(string: datum.image)) { phase in
                                                 switch phase {
@@ -64,6 +65,8 @@ struct SpecialView: View {
                                                 .foregroundStyle(.white)
                                             Spacer()
                                         }
+                                        .padding(.bottom, 5)
+                                        
                                         HTMLTextView(
                                             htmlContent: datum.description,
                                             maxLines: 3,
@@ -77,10 +80,7 @@ struct SpecialView: View {
                                             marginBottom: 0,
                                             marginLeft: 0
                                         )
-                                        .frame(height: 40) // Adjust height based on your design
-
-
-                                        
+                                        .frame(height: 60) // Adjust height based on your design
                                         
                                         Button(action: {
                                             // Navigate to the detail view of the tile
@@ -95,7 +95,7 @@ struct SpecialView: View {
                                         }
                                         .padding(.top, 5)
                                     }
-                                    .padding(.all, 10)
+                                    .padding()
                                     .background(AssetNames.Colors.gameColor)
                                     .clipShape(RoundedRectangle(cornerRadius: 8))
                                     .padding(.horizontal, 10)
@@ -129,3 +129,10 @@ struct SpecialView: View {
         }
     }
 }
+
+//struct SpecialView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SpecialView()
+//            .environmentObject(AppSettings()) // Add this if `AppSettings` is needed for the preview
+//    }
+//}

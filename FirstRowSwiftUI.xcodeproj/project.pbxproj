@@ -42,8 +42,6 @@
 		CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */; };
 		CA7093212C6512DB009E1A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093202C6512DB009E1A08 /* String.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
-		CAC2F4C22C6558F800EB8107 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4C12C6558F800EB8107 /* NetworkManager.swift */; };
-		CAC2F4C42C65593000EB8107 /* samples.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4C32C65593000EB8107 /* samples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,8 +98,6 @@
 		CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
 		CA7093202C6512DB009E1A08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
-		CAC2F4C12C6558F800EB8107 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		CAC2F4C32C65593000EB8107 /* samples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = samples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,8 +317,6 @@
 				CA7093112C65022C009E1A08 /* Interceptor.swift */,
 				CA7093132C65026D009E1A08 /* BaseApiController.swift */,
 				CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */,
-				CAC2F4C12C6558F800EB8107 /* NetworkManager.swift */,
-				CAC2F4C32C65593000EB8107 /* samples.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -490,7 +484,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAC2F4C22C6558F800EB8107 /* NetworkManager.swift in Sources */,
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
 				CA3D44442C642C5900995651 /* ListBack.swift in Sources */,
 				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
@@ -511,7 +504,6 @@
 				CA3D443E2C6410B000995651 /* GameListView.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
-				CAC2F4C42C65593000EB8107 /* samples.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
