@@ -72,11 +72,14 @@ struct GameListView: View {
             } .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
 
-                    Button {
-                        dismiss.callAsFunction()
-                    } label: {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.white)
+                    HStack(spacing:10) {
+                        Button {
+                            dismiss.callAsFunction()
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor(.white)
+                    }
+                        Image(AssetNames.Images.statusBarLogo)
                     }
 
                 }
