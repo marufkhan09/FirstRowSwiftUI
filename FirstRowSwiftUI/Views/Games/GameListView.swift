@@ -8,16 +8,16 @@ struct GameListView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack {
+            VStack(spacing:0) {
                 ZStack(alignment:.bottom) {
                     // Blue background
                     AssetNames.Colors.appbarColor
                     
-                        .frame(width: geo.size.width, height: 110)
+                        .frame(width: geo.size.width, height: 75)
                     
                     // Black background with uneven corners
                     Color.black
-                        .frame(width: geo.size.width, height: 70)
+                        .frame(width: geo.size.width, height: 55)
                         .clipShape(UnevenRoundedRectangle(topLeadingRadius: 15, topTrailingRadius: 15))
                     
                     // Horizontal ScrollView for games
@@ -34,12 +34,12 @@ struct GameListView: View {
                                                 Circle()
                                                     .stroke(game.id == selectedGame?.id ? Color.blue : Color.black, lineWidth: 2)
                                             )
-                                            .padding(.bottom, 4)
+                                            .padding(.bottom, 2)
                                         
                                         Text(game.name)
                                             .foregroundColor(game.id == selectedGame?.id ? .blue : .white)
                                     }
-                                    .padding()
+                                    .padding(.bottom,4)
                                     
                                     .onTapGesture {
                                         selectGame(game)
@@ -68,7 +68,7 @@ struct GameListView: View {
                     }
                 }
                 
-                Spacer()
+//                Spacer()
             } .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     
