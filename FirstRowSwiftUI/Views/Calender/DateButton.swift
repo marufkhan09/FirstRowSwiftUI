@@ -4,9 +4,7 @@
 //
 //  Created by Maruf Khan on 8/8/24.
 //
-
 import SwiftUI
-
 import UIKit
 
 struct DateButton: View {
@@ -14,25 +12,15 @@ struct DateButton: View {
     var isSelected: Bool
     var action: () -> Void
     
-    private var day: String {
+    private var monthDay: String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        return formatter.string(from: date)
-    }
-    
-    private var dayOfWeek: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
+        formatter.dateFormat = "MMM d" // Format to show month and day
         return formatter.string(from: date)
     }
     
     var body: some View {
         VStack {
-            Text(dayOfWeek)
-                .font(.headline)
-                .foregroundColor(isSelected ? .blue : .white)
-            
-            Text(day)
+            Text(monthDay)
                 .font(.headline)
                 .foregroundColor(isSelected ? .blue : .white)
         }
@@ -48,5 +36,5 @@ struct DateButton: View {
 }
 
 //#Preview {
-//    DateButton()
+//    DateButton(date: Date(), isSelected: false, action: {})
 //}

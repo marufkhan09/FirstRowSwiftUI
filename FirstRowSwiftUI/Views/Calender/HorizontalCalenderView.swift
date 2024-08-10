@@ -5,11 +5,10 @@
 //  Created by Maruf Khan on 8/8/24.
 //
 
-
 import SwiftUI
 
 struct HorizontalCalendar: View {
-    @State private var selectedDate: Date = Date()
+    @Binding var selectedDate: Date
     private let calendar = Calendar.current
     private let today = Date()
     
@@ -46,7 +45,9 @@ struct HorizontalCalendar: View {
                     // Initial scroll to center the selected date
                     scrollToSelectedDate(proxy: proxy)
                 }
-            }.frame(height: 60).background(.black)
+            }
+            .frame(height: 60)
+            .background(.black)
         }
     }
     
@@ -58,9 +59,8 @@ struct HorizontalCalendar: View {
     }
 }
 
-
 struct HorizontalCalendar_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalCalendar()
+        HorizontalCalendar(selectedDate: .constant(Date()))
     }
 }
