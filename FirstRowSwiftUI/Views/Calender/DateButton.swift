@@ -29,12 +29,12 @@ struct DateButton: View {
     var body: some View {
         VStack {
             Text(dayOfWeek)
-                .font(.caption)
-                .foregroundColor(isSelected ? .blue : .primary)
+                .font(.headline)
+                .foregroundColor(isSelected ? .blue : .white)
             
             Text(day)
                 .font(.headline)
-                .foregroundColor(isSelected ? .blue : .primary)
+                .foregroundColor(isSelected ? .blue : .white)
         }
         .onTapGesture {
             // Trigger haptic feedback

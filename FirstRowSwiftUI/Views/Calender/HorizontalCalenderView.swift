@@ -46,7 +46,7 @@ struct HorizontalCalendar: View {
                     // Initial scroll to center the selected date
                     scrollToSelectedDate(proxy: proxy)
                 }
-            }
+            }.frame(height: 60).background(.black)
         }
     }
     

@@ -41,6 +41,8 @@
 		CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */; };
 		CA7093212C6512DB009E1A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093202C6512DB009E1A08 /* String.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
+		CAD31CF92C67FA1E0069F300 /* HGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CF82C67FA1E0069F300 /* HGameView.swift */; };
+		CAD31CFC2C67FBC20069F300 /* MlbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFB2C67FBC20069F300 /* MlbView.swift */; };
 		CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1309C2C661AA0004EC139 /* Datum.swift */; };
 		CAE130B42C661AA1004EC139 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE130A12C661AA0004EC139 /* Total.swift */; };
 		CAE130B52C661AA1004EC139 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE130A22C661AA0004EC139 /* Line.swift */; };
@@ -103,6 +105,8 @@
 		CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
 		CA7093202C6512DB009E1A08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
+		CAD31CF82C67FA1E0069F300 /* HGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGameView.swift; sourceTree = "<group>"; };
+		CAD31CFB2C67FBC20069F300 /* MlbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbView.swift; sourceTree = "<group>"; };
 		CAE1309C2C661AA0004EC139 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
 		CAE130A12C661AA0004EC139 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		CAE130A22C661AA0004EC139 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -317,8 +321,10 @@
 		CA3D443C2C6410A100995651 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				CAD31CFA2C67FBB40069F300 /* Sports */,
 				CA3D443D2C6410B000995651 /* GameListView.swift */,
 				CA3D44432C642C5900995651 /* ListBack.swift */,
+				CAD31CF82C67FA1E0069F300 /* HGameView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -369,6 +375,14 @@
 				CAE130A12C661AA0004EC139 /* Total.swift */,
 			);
 			path = MLBModel;
+			sourceTree = "<group>";
+		};
+		CAD31CFA2C67FBB40069F300 /* Sports */ = {
+			isa = PBXGroup;
+			children = (
+				CAD31CFB2C67FBC20069F300 /* MlbView.swift */,
+			);
+			path = Sports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +526,7 @@
 			files = (
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
 				CA3D44442C642C5900995651 /* ListBack.swift in Sources */,
+				CAD31CFC2C67FBC20069F300 /* MlbView.swift in Sources */,
 				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
@@ -533,6 +548,7 @@
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
 				CA3D443E2C6410B000995651 /* GameListView.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
+				CAD31CF92C67FA1E0069F300 /* HGameView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,

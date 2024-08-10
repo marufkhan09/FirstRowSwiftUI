@@ -4,15 +4,13 @@ struct GameListView: View {
     @Binding var games: [GamesModel]
     @Binding var selectedGame: GamesModel?
     @Environment(\.dismiss) private var dismiss
-    @State private var scrollViewProxy: ScrollViewProxy?
-    
+    @EnvironmentObject var settings: AppSettings
     var body: some View {
         GeometryReader { geo in
-            VStack(spacing:0) {
-                ZStack(alignment:.bottom) {
+            VStack(alignment:.leading,spacing: 0) {
+                ZStack(alignment: .bottom) {
                     // Blue background
                     AssetNames.Colors.appbarColor
-                    
                         .frame(width: geo.size.width, height: 75)
                     
                     // Black background with uneven corners
@@ -21,88 +19,54 @@ struct GameListView: View {
                         .clipShape(UnevenRoundedRectangle(topLeadingRadius: 15, topTrailingRadius: 15))
                     
                     // Horizontal ScrollView for games
-                    ScrollViewReader { proxy in
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 16) {
-                                ForEach(games) { game in
-                                    VStack {
-                                        Image(game.imageName)
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(width: 40, height: 40).clipShape(Circle())
-                                            .overlay(
-                                                Circle()
-                                                    .stroke(game.id == selectedGame?.id ? Color.blue : Color.black, lineWidth: 2)
-                                            )
-                                            .padding(.bottom, 2)
-                                        
-                                        Text(game.name)
-                                            .foregroundColor(game.id == selectedGame?.id ? .blue : .white)
-                                    }
-                                    .padding(.bottom,4)
-                                    
-                                    .onTapGesture {
-                                        selectGame(game)
-                                    }
-                                    .id(game.id) // Use the game id as the unique identifier for scrolling
-                                }
-                            }
-                            .padding(.horizontal)
-                        }
-                        .onChange(of: selectedGame) { newValue in
-                            if let selectedGame = newValue {
-                                withAnimation {
-                                    proxy.scrollTo(selectedGame.id, anchor: .center)
-                                }
-                            }
-                        }
-                        .onAppear {
-                            scrollViewProxy = proxy
-                            // Scroll to the selected game on appear
-                            if let selectedGame = selectedGame {
-                                withAnimation {
-                                    proxy.scrollTo(selectedGame.id, anchor: .center)
-                                }
-                            }
-                        }
-                    }
+                    HGameView(games: $games, selectedGame: $selectedGame)
                 }
                 
-//                Spacer()
-            } .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                // Display the selected game's name
+                if let selectedGame = selectedGame {
+                    if( selectedGame.name == "MLB"){
+                        MlbView()
+                    }else {
+                        Text("Selected Game: \(selectedGame.name)")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 20)
+                    }
                     
-                    HStack(spacing:10) {
+                    
+                } else {
+                    Text("No Game Selected")
+                        .font(.title)
+                        .foregroundColor(.white)
+                        .padding(.top, 20)
+                }
+                
+                Spacer()
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 10) {
                         Button {
-                            dismiss.callAsFunction()
+                            dismiss()
                         } label: {
                             Image(systemName: "chevron.left")
                                 .foregroundColor(.white)
                         }
                         Image(AssetNames.Images.statusBarLogo)
                     }
-                    
                 }
-                
-                
             }
             .navigationBarModifier(
                 backgroundColor: UIColor(red: 0.114, green: 0.188, blue: 0.322, alpha: 1.0),
                 foregroundColor: UIColor.white,
                 tintColor: nil,
                 withSeparator: false
-            )
+            ).preferredColorScheme(settings.isDarkMode ? .dark : .light)
             
         }
     }
-    
-    private func selectGame(_ game: GamesModel) {
-        for index in games.indices {
-            games[index].isSelected = (games[index].id == game.id)
-        }
-        selectedGame = game
-    }
 }
+
 
 #Preview {
     GameListView(games: .constant([
@@ -122,5 +86,5 @@ struct GameListView: View {
         GamesModel(name: "UCL", imageName: AssetNames.Images.ucl),
         GamesModel(name: "UEL", imageName: AssetNames.Images.uel),
         GamesModel(name: "FIFA", imageName: AssetNames.Images.fifa)
-    ]), selectedGame: .constant(GamesModel(name: "NFL", imageName: AssetNames.Images.nfl)))
-                 }
+    ]), selectedGame: .constant(GamesModel(name: "NFL", imageName: AssetNames.Images.nfl))).environmentObject(AppSettings())
+}
