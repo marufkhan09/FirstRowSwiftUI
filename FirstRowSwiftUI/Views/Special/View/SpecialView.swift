@@ -125,14 +125,9 @@ struct SpecialView: View {
             }
         }
         .onAppear {
-            viewModel.fetchData() // Trigger the data fetching when the view appears
+           // viewModel.fetchData() // Trigger the data fetching when the view appears
+            
+            viewModel.fetchData()
         }
     }
 }
-
-//struct SpecialView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SpecialView()
-//            .environmentObject(AppSettings()) // Add this if `AppSettings` is needed for the preview
-//    }
-//}

@@ -15,7 +15,22 @@ struct AssetNames {
         static let news = "article-line"
         static let special = "Special"
         static let statusBarLogo = "statuslogo"
+        static let nfl = "nfl"
+        static let nba = "nba"
         static let mlb = "mlb"
+        static let nhl = "nhl"
+        static let ncaaf = "ncaaf"
+        static let ncaab = "ncaab"
+        static let wnba = "wnba"
+        static let mls = "mls"
+        static let epl = "epl"
+        static let ligue1 = "ligue1"
+        static let laliga = "laliga"
+        static let seriaa = "seriaa"
+        static let ucl = "ucl"
+        static let uel = "uel"
+        static let fifa = "fifa"
+        static let bundesliga = "bundesliga"
         // Add other image names here
     }
 

@@ -28,8 +28,8 @@ struct GameListView: View {
                                     VStack {
                                         Image(game.imageName)
                                             .resizable()
-                                            .scaledToFit()
-                                            .frame(width: 40, height: 40)
+                                            .scaledToFill()
+                                            .frame(width: 40, height: 40).clipShape(Circle())
                                             .overlay(
                                                 Circle()
                                                     .stroke(game.id == selectedGame?.id ? Color.blue : Color.black, lineWidth: 2)
@@ -71,20 +71,20 @@ struct GameListView: View {
                 Spacer()
             } .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-
+                    
                     HStack(spacing:10) {
                         Button {
                             dismiss.callAsFunction()
                         } label: {
                             Image(systemName: "chevron.left")
                                 .foregroundColor(.white)
-                    }
+                        }
                         Image(AssetNames.Images.statusBarLogo)
                     }
-
+                    
                 }
                 
-             
+                
             }
             .navigationBarModifier(
                 backgroundColor: UIColor(red: 0.114, green: 0.188, blue: 0.322, alpha: 1.0),
@@ -92,7 +92,7 @@ struct GameListView: View {
                 tintColor: nil,
                 withSeparator: false
             )
-          
+            
         }
     }
     
@@ -106,21 +106,21 @@ struct GameListView: View {
 
 #Preview {
     GameListView(games: .constant([
-        GamesModel(name: "NFL", imageName: "football"),
-        GamesModel(name: "NBA", imageName: "basketball"),
-        GamesModel(name: "MLB", imageName: "baseball"),
-        GamesModel(name: "NHL", imageName: "hockey"),
-        GamesModel(name: "NCAAF", imageName: "college_football"),
-        GamesModel(name: "NCAAB", imageName: "college_basketball"),
-        GamesModel(name: "WNBA", imageName: "women_basketball"),
-        GamesModel(name: "MLS", imageName: "soccer"),
-        GamesModel(name: "EPL", imageName: "soccer"),
-        GamesModel(name: "LIGUE 1", imageName: "soccer"),
-        GamesModel(name: "BUNDESLIGA", imageName: "soccer"),
-        GamesModel(name: "LALIGA", imageName: "soccer"),
-        GamesModel(name: "SERIA A", imageName: "soccer"),
-        GamesModel(name: "UCL", imageName: "soccer"),
-        GamesModel(name: "UEL", imageName: "soccer"),
-        GamesModel(name: "FIFA", imageName: "soccer")
-    ]), selectedGame: .constant(GamesModel(name: "NFL", imageName: "football")))
-}
+        GamesModel(name: "NFL", imageName: AssetNames.Images.nfl),
+        GamesModel(name: "NBA", imageName: AssetNames.Images.nba),
+        GamesModel(name: "MLB", imageName: AssetNames.Images.mlb),
+        GamesModel(name: "NHL", imageName: AssetNames.Images.nhl),
+        GamesModel(name: "NCAAF", imageName: AssetNames.Images.ncaaf),
+        GamesModel(name: "NCAAB", imageName: AssetNames.Images.ncaab),
+        GamesModel(name: "WNBA", imageName: AssetNames.Images.wnba),
+        GamesModel(name: "MLS", imageName: AssetNames.Images.mls),
+        GamesModel(name: "EPL", imageName: AssetNames.Images.epl),
+        GamesModel(name: "LIGUE 1", imageName: AssetNames.Images.ligue1),
+        GamesModel(name: "BUNDESLIGA", imageName:AssetNames.Images.bundesliga),
+        GamesModel(name: "LALIGA", imageName: AssetNames.Images.laliga),
+        GamesModel(name: "SERIA A", imageName: AssetNames.Images.seriaa),
+        GamesModel(name: "UCL", imageName: AssetNames.Images.ucl),
+        GamesModel(name: "UEL", imageName: AssetNames.Images.uel),
+        GamesModel(name: "FIFA", imageName: AssetNames.Images.fifa)
+    ]), selectedGame: .constant(GamesModel(name: "NFL", imageName: AssetNames.Images.nfl)))
+                 }

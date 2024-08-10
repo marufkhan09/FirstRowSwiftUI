@@ -7,13 +7,10 @@ import Foundation
 
 // MARK: - MlbModel
 class MlbModel: Codable {
-    var data: [Datum]?
-    var links: Links?
-    var meta: Meta?
-
-    init(data: [Datum]?, links: Links?, meta: Meta?) {
+    var data: [MlbData]?
+    
+    init(data: [MlbData]? = []) {
         self.data = data
-        self.links = links
-        self.meta = meta
+
     }
 }

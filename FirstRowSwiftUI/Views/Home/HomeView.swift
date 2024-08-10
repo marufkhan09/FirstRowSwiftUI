@@ -3,22 +3,22 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var settings: AppSettings
     @State private var games = [
-        GamesModel(name: "NFL", imageName: "nfl"),
-        GamesModel(name: "NBA", imageName: "nba"),
-        GamesModel(name: "MLB", imageName: "mlb"),
-        GamesModel(name: "NHL", imageName: "nhl"),
-        GamesModel(name: "NCAAF", imageName: "ncaaf"),
-        GamesModel(name: "NCAAB", imageName: "ncaab"),
-        GamesModel(name: "WNBA", imageName: "wnba"),
-        GamesModel(name: "MLS", imageName: "soccer"),
-        GamesModel(name: "EPL", imageName: "soccer"),
-        GamesModel(name: "LIGUE 1", imageName: "soccer"),
-        GamesModel(name: "BUNDESLIGA", imageName: "soccer"),
-        GamesModel(name: "LALIGA", imageName: "soccer"),
-        GamesModel(name: "SERIA A", imageName: "soccer"),
-        GamesModel(name: "UCL", imageName: "soccer"),
-        GamesModel(name: "UEL", imageName: "soccer"),
-        GamesModel(name: "FIFA", imageName: "soccer")
+        GamesModel(name: "NFL", imageName: AssetNames.Images.nfl),
+        GamesModel(name: "NBA", imageName: AssetNames.Images.nba),
+        GamesModel(name: "MLB", imageName: AssetNames.Images.mlb),
+        GamesModel(name: "NHL", imageName: AssetNames.Images.nhl),
+        GamesModel(name: "NCAAF", imageName: AssetNames.Images.ncaaf),
+        GamesModel(name: "NCAAB", imageName: AssetNames.Images.ncaab),
+        GamesModel(name: "WNBA", imageName: AssetNames.Images.wnba),
+        GamesModel(name: "MLS", imageName: AssetNames.Images.mls),
+        GamesModel(name: "EPL", imageName: AssetNames.Images.epl),
+        GamesModel(name: "LIGUE 1", imageName: AssetNames.Images.ligue1),
+        GamesModel(name: "BUNDESLIGA", imageName:AssetNames.Images.bundesliga),
+        GamesModel(name: "LALIGA", imageName: AssetNames.Images.laliga),
+        GamesModel(name: "SERIA A", imageName: AssetNames.Images.seriaa),
+        GamesModel(name: "UCL", imageName: AssetNames.Images.ucl),
+        GamesModel(name: "UEL", imageName: AssetNames.Images.uel),
+        GamesModel(name: "FIFA", imageName: AssetNames.Images.fifa)
     ]
     
     @State private var selectedGame: GamesModel? = nil

@@ -7,22 +7,18 @@ import Foundation
 
 // MARK: - Line
 class Line: Codable {
-    var lineID: Int?
     var moneyline: Moneyline?
     var spread: Spread?
     var total: Total?
-    var affiliate: Affiliate?
 
     enum CodingKeys: String, CodingKey {
-        case lineID = "line_id"
-        case moneyline, spread, total, affiliate
+
+        case moneyline, spread, total
     }
 
-    init(lineID: Int?, moneyline: Moneyline?, spread: Spread?, total: Total?, affiliate: Affiliate?) {
-        self.lineID = lineID
+    init(moneyline: Moneyline? = Moneyline(), spread: Spread? = Spread(), total: Total? = Total()) {
         self.moneyline = moneyline
         self.spread = spread
         self.total = total
-        self.affiliate = affiliate
     }
 }
