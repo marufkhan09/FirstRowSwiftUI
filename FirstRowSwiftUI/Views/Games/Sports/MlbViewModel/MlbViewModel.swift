@@ -18,39 +18,39 @@ class MlbViewModel: ObservableObject {
         print("Snackbar Message: \(message)")
     }
     
-//    func fetchMlbData() {
-//        mlbEventLoading = true
-//        errorMessage = nil
-//        
-//        BaseApiController.shared.request(
-//            endpoint: "3/2024-08-09/2024-08-09",
-//            method: .get
-//        ) { result in
-//            DispatchQueue.main.async {
-//                self.mlbEventLoading = false
-//                switch result {
-//                case .success(let data):
-//                    // Print the raw JSON response body
-//                    if String(data: data, encoding: .utf8) != nil {
-//                        // Pretty print the JSON
-//                        self.prettyPrintJSON(data: data)
-//                    }
-//                    
-//                    do {
-//                        let mlbModel = try JSONDecoder().decode(MlbModel.self, from: data)
-//                        self.mlbGameData = mlbModel.data!
-//                    } catch {
-//                        self.errorMessage = "Failed to decode data: \(error.localizedDescription)"
-//                        print("Failed to decode data: \(error.localizedDescription)")
-//                    }
-//                case .failure(let error):
-//                    self.errorMessage = "Network request failed: \(error.localizedDescription)"
-//                    print("Network request failed: \(error.localizedDescription)")
-//                    self.showSnackbar(message: "Network request failed: \(error.localizedDescription)")
-//                }
-//            }
-//        }
-//    }
+    func fetchMlbData(for date: String) {
+        mlbEventLoading = true
+        errorMessage = nil
+        
+        BaseApiController.shared.request(
+            endpoint: "3/\(date)/\(date)",
+            method: .get
+        ) { result in
+            DispatchQueue.main.async {
+                self.mlbEventLoading = false
+                switch result {
+                case .success(let data):
+                    // Print the raw JSON response body
+                    if String(data: data, encoding: .utf8) != nil {
+                        // Pretty print the JSON
+                        self.prettyPrintJSON(data: data)
+                    }
+                    
+                    do {
+                        let mlbModel = try JSONDecoder().decode(MlbModel.self, from: data)
+                        self.mlbGameData = mlbModel.data!
+                    } catch {
+                        self.errorMessage = "Failed to decode data: \(error.localizedDescription)"
+                        print("Failed to decode data: \(error.localizedDescription)")
+                    }
+                case .failure(let error):
+                    self.errorMessage = "Network request failed: \(error.localizedDescription)"
+                    print("Network request failed: \(error.localizedDescription)")
+                    self.showSnackbar(message: "Network request failed: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
     
     private func prettyPrintJSON(data: Data) {
         do {
@@ -70,7 +70,7 @@ class MlbViewModel: ObservableObject {
     }
     
     
-    func fetchMlbData() {
+    func fetchMlbDataFromJson() {
         mlbEventLoading = true
         errorMessage = nil
 

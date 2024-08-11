@@ -41,7 +41,7 @@ struct HGameView: View {
                 }
                 .padding(.horizontal)
             }
-            .onChange(of: selectedGame) { newValue in
+            .onChange(of: selectedGame) { newValue, oldValue in
                 if let selectedGame = newValue {
                     withAnimation {
                         proxy.scrollTo(selectedGame.id, anchor: .center)

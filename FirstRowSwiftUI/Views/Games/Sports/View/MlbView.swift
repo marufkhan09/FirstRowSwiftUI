@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct MlbView: View {
     @State private var selectedDate: Date = Date() // Track the selected date
+    @StateObject private var viewModel = MlbViewModel() // ViewModel to fetch data
     
     private var formattedDate: String {
         let formatter = DateFormatter()
@@ -21,13 +20,26 @@ struct MlbView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HorizontalCalendar(selectedDate: $selectedDate) // Pass the selected date to the calendar
-            MlbGamesList()
+            
+            // Pass the fetched data and loading state to MlbGamesList
+            MlbGamesList(viewModel: viewModel)
+            
+                .onChange(of: selectedDate, { oldValue, newValue in
+                    viewModel.fetchMlbDataFromJson()
+                })
+                .onAppear {
+                    viewModel.fetchMlbDataFromJson()
+                }
         }
         .background(Color(UIColor.systemBackground)) // Adapts to dark/light mode automatically
     }
+    
+    
+    
 }
 
 #Preview {
     MlbView()
 }
+
 

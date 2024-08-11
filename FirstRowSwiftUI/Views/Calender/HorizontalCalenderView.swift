@@ -4,7 +4,6 @@
 //
 //  Created by Maruf Khan on 8/8/24.
 //
-
 import SwiftUI
 
 struct HorizontalCalendar: View {
@@ -64,3 +63,4 @@ struct HorizontalCalendar_Previews: PreviewProvider {
         HorizontalCalendar(selectedDate: .constant(Date()))
     }
 }
+

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MlbGamesList: View {
-    @StateObject private var viewModel = MlbViewModel()
+    @ObservedObject var viewModel: MlbViewModel
     
     var body: some View {
         ScrollView(.vertical) {
@@ -74,9 +74,6 @@ struct MlbGamesList: View {
           
         }
         .scrollIndicators(.hidden)
-        .onAppear {
-            viewModel.fetchMlbData()
-        }
     }
 }
 
@@ -85,8 +82,4 @@ private func convertTo12HourFormat(_ time: String?) -> String {
     return time ?? ""
 }
 
-struct MlbGamesList_Previews: PreviewProvider {
-    static var previews: some View {
-        MlbGamesList()
-    }
-}
+
