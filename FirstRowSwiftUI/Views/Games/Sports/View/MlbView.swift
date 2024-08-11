@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct MlbView: View {
     @State private var selectedDate: Date = Date() // Track the selected date
     
@@ -17,10 +19,9 @@ struct MlbView: View {
     }
     
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
             HorizontalCalendar(selectedDate: $selectedDate) // Pass the selected date to the calendar
             MlbGamesList()
-            
         }
         .background(Color(UIColor.systemBackground)) // Adapts to dark/light mode automatically
     }
@@ -29,3 +30,4 @@ struct MlbView: View {
 #Preview {
     MlbView()
 }
+

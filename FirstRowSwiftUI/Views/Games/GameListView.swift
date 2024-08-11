@@ -7,7 +7,7 @@ struct GameListView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack(alignment:.center,spacing: 0) {
+            VStack(alignment:.leading,spacing: 0) {
                 ZStack(alignment: .bottom) {
                     // Blue background
                     AssetNames.Colors.appbarColor
@@ -26,6 +26,7 @@ struct GameListView: View {
                 if let selectedGame = selectedGame {
                     if selectedGame.name == "MLB" {
                         MlbView()
+                      
                     } else {
                         Text("Selected Game: \(selectedGame.name)")
                             .font(.title)

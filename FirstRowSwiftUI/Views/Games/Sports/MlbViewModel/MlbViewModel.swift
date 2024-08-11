@@ -75,12 +75,12 @@ class MlbViewModel: ObservableObject {
         errorMessage = nil
 
         // Load data from the local JSON file
-        if let url = Bundle.main.url(forResource: "mlbData", withExtension: "json") {
+        if let url = Bundle.main.url(forResource: "mlbdatafile", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 
                 // Print the raw JSON response body
-                if let jsonString = String(data: data, encoding: .utf8) {
+                if String(data: data, encoding: .utf8) != nil {
                     // Pretty print the JSON
                     self.prettyPrintJSON(data: data)
                 }
@@ -89,6 +89,8 @@ class MlbViewModel: ObservableObject {
                 do {
                     let mlbModel = try JSONDecoder().decode(MlbModel.self, from: data)
                     self.mlbGameData = mlbModel.data!
+                    print("DATA::::\(self.mlbGameData.count)")
+                    self.mlbEventLoading = false
                 } catch {
                     self.errorMessage = "Failed to decode data: \(error.localizedDescription)"
                     print("Failed to decode data: \(error.localizedDescription)")

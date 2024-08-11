@@ -12,7 +12,7 @@ struct MlbScoreItem: View {
     var body: some View {
         GeometryReader { proxy in
           
-            VStack (alignment:.center){
+            VStack (alignment:.leading){
                 HStack(alignment:.center){
                         VStack {
                             TeamView(team: item.teamsNormalized?.first, score: item.score?.scoreAway, line: item.lines?.first, isHome: false)
@@ -35,15 +35,9 @@ struct MlbScoreItem: View {
                         }.frame(width:proxy.size.width * 0.3)
                 }
                 
-                if let message = item.message, !message.isEmpty {
-                    Text(message)
-                        .foregroundColor(.white)
-                        .padding([.leading, .bottom], 12)
-                        .background(AssetNames.Colors.primaryColor) // Customize this color
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+            
                 
-            }.background(AssetNames.Colors.primaryColor).frame(height:180)
+            }.background(AssetNames.Colors.primaryColor)
         }
     }
 }

@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct TeamView: View {
-    let team: TeamsNormalized?
-    let score: Int?
-    let line: Line?
-    let isHome: Bool
+        let team: TeamsNormalized?
+        let score: Int?
+        let line: Line?
+        let isHome: Bool
     
     var body: some View {
-        VStack {
-            HStack {
+        VStack(alignment:.leading) {
+            HStack(alignment:.center) {
                 Circle()
                     .fill(AssetNames.Colors.secondaryColor) // Customize this color
-                    .frame(width: 20, height: 20)
+                    .frame(width: 26, height: 26)
                     .overlay(Text(isHome ? "H" : "A")
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.title3)
                         .foregroundColor(.white))
                 
                 Text(team?.abbreviation ?? "")
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.title3)
                     .foregroundColor(.white)
                     .lineLimit(1)
                     .truncationMode(.tail)
@@ -32,15 +32,14 @@ struct TeamView: View {
                 Spacer()
                 
                 Text(moneylineText)
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.title3)
                     .foregroundColor(.white)
                     .frame(width: 80, alignment: .center)
                 
                 Text("\(score ?? 0)")
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(.title3)
                     .foregroundColor(.white)
             }
-            .padding(.bottom, 10)
         }
     }
     
@@ -51,5 +50,7 @@ struct TeamView: View {
         return "--"
     }
 }
+
+
 
 
