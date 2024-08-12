@@ -1,6 +1,13 @@
+//
+//  GameListView.swift
+//  FirstRowSwiftUI
+//
+//  Created by Maruf Khan on 12/8/24.
+//
+
 import SwiftUI
 
-struct GameListView: View {
+struct AllGames: View {
     @Binding var games: [GamesModel]
     @Binding var selectedGame: GamesModel?
     @Environment(\.dismiss) private var dismiss
@@ -19,7 +26,7 @@ struct GameListView: View {
                         .clipShape(UnevenRoundedRectangle(topLeadingRadius: 15, topTrailingRadius: 15))
                     
                     // Horizontal ScrollView for games
-                    HGameView(games: $games, selectedGame: $selectedGame)
+                    HGameListView(games: $games, selectedGame: $selectedGame)
                 }
                 
                 // Display the selected game's view or name
@@ -67,7 +74,7 @@ struct GameListView: View {
 }
 
 #Preview {
-    GameListView(
+    AllGames(
         games: .constant([
             GamesModel(name: "NFL", imageName: AssetNames.Images.nfl),
             GamesModel(name: "NBA", imageName: AssetNames.Images.nba),

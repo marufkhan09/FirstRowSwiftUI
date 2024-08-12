@@ -1,5 +1,5 @@
 //
-//  HGameView.swift
+//  HGameListView.swift
 //  FirstRowSwiftUI
 //
 //  Created by Maruf Khan on 11/8/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct HGameView: View {
+struct HGameListView: View {
     @Binding var games: [GamesModel]
     @Binding var selectedGame: GamesModel?
     

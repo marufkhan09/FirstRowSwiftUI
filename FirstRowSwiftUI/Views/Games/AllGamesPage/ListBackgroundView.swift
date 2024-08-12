@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListBack: View {
+struct ListBackgroundView: View {
     var body: some View {
         ZStack(alignment: .bottom){
             Color(.blue).frame(width: 400,height: 100)
@@ -19,5 +19,5 @@ struct ListBack: View {
 }
 
 #Preview {
-    ListBack()
+    ListBackgroundView()
 }

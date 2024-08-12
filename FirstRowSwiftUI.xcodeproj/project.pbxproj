@@ -38,6 +38,14 @@
 		CA70931B2C651240009E1A08 /* ConnectivityRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */; };
 		CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */; };
 		CA7093212C6512DB009E1A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093202C6512DB009E1A08 /* String.swift */; };
+		CA9CB8892C6A591A00E2AC48 /* AllGames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8882C6A591A00E2AC48 /* AllGames.swift */; };
+		CA9CB88B2C6A594900E2AC48 /* HGameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB88A2C6A594900E2AC48 /* HGameListView.swift */; };
+		CA9CB88D2C6A597700E2AC48 /* ListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB88C2C6A597700E2AC48 /* ListBackgroundView.swift */; };
+		CA9CB8932C6A5A7D00E2AC48 /* MlbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8922C6A5A7D00E2AC48 /* MlbView.swift */; };
+		CA9CB8952C6A5A9500E2AC48 /* MlbGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8942C6A5A9500E2AC48 /* MlbGameList.swift */; };
+		CA9CB8972C6A5AA600E2AC48 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8962C6A5AA600E2AC48 /* TeamView.swift */; };
+		CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */; };
+		CA9CB89B2C6A5B5500E2AC48 /* MlbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
 		CAD31CFE2C680A670069F300 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFD2C680A670069F300 /* Score.swift */; };
 		CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1309C2C661AA0004EC139 /* Datum.swift */; };
@@ -100,6 +108,14 @@
 		CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityRequestRetrier.swift; sourceTree = "<group>"; };
 		CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
 		CA7093202C6512DB009E1A08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		CA9CB8882C6A591A00E2AC48 /* AllGames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGames.swift; sourceTree = "<group>"; };
+		CA9CB88A2C6A594900E2AC48 /* HGameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGameListView.swift; sourceTree = "<group>"; };
+		CA9CB88C2C6A597700E2AC48 /* ListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBackgroundView.swift; sourceTree = "<group>"; };
+		CA9CB8922C6A5A7D00E2AC48 /* MlbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbView.swift; sourceTree = "<group>"; };
+		CA9CB8942C6A5A9500E2AC48 /* MlbGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbGameList.swift; sourceTree = "<group>"; };
+		CA9CB8962C6A5AA600E2AC48 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbScoreItem.swift; sourceTree = "<group>"; };
+		CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbViewModel.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
 		CAD31CFD2C680A670069F300 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CAE1309C2C661AA0004EC139 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
@@ -140,6 +156,7 @@
 		CA2A21A42C63CDBC007E98E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA9CB8862C6A58BC00E2AC48 /* Games */,
 				CA3D44392C640E2100995651 /* Calender */,
 				CA2AC8D22C63B15F0067D2A5 /* TabView */,
 				CA2AC8CF2C63B0D10067D2A5 /* Special */,
@@ -338,6 +355,61 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CA9CB8862C6A58BC00E2AC48 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB88E2C6A599700E2AC48 /* SportsList */,
+				CA9CB8872C6A58F000E2AC48 /* AllGamesPage */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		CA9CB8872C6A58F000E2AC48 /* AllGamesPage */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB8882C6A591A00E2AC48 /* AllGames.swift */,
+				CA9CB88A2C6A594900E2AC48 /* HGameListView.swift */,
+				CA9CB88C2C6A597700E2AC48 /* ListBackgroundView.swift */,
+			);
+			path = AllGamesPage;
+			sourceTree = "<group>";
+		};
+		CA9CB88E2C6A599700E2AC48 /* SportsList */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB88F2C6A5A2300E2AC48 /* Mlb */,
+			);
+			path = SportsList;
+			sourceTree = "<group>";
+		};
+		CA9CB88F2C6A5A2300E2AC48 /* Mlb */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB8912C6A5A5B00E2AC48 /* View */,
+				CA9CB8902C6A5A5200E2AC48 /* ViewModel */,
+			);
+			path = Mlb;
+			sourceTree = "<group>";
+		};
+		CA9CB8902C6A5A5200E2AC48 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA9CB8912C6A5A5B00E2AC48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA9CB8922C6A5A7D00E2AC48 /* MlbView.swift */,
+				CA9CB8942C6A5A9500E2AC48 /* MlbGameList.swift */,
+				CA9CB8962C6A5AA600E2AC48 /* TeamView.swift */,
+				CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CAC2F4BA2C65458900EB8107 /* SpecialModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,8 +583,10 @@
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
 				CAE130B72C661AA1004EC139 /* Spread.swift in Sources */,
+				CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */,
 				CA7093142C65026D009E1A08 /* BaseApiController.swift in Sources */,
 				CAD31CFE2C680A670069F300 /* Score.swift in Sources */,
+				CA9CB8932C6A5A7D00E2AC48 /* MlbView.swift in Sources */,
 				CA3D44402C6415DC00995651 /* DateButton.swift in Sources */,
 				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
@@ -522,14 +596,20 @@
 				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
+				CA9CB88D2C6A597700E2AC48 /* ListBackgroundView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
+				CA9CB88B2C6A594900E2AC48 /* HGameListView.swift in Sources */,
+				CA9CB8972C6A5AA600E2AC48 /* TeamView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
+				CA9CB89B2C6A5B5500E2AC48 /* MlbViewModel.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
 				CAE130BF2C661AA1004EC139 /* Moneyline.swift in Sources */,
 				CAE130BC2C661AA1004EC139 /* MlbModel.swift in Sources */,
 				CA70930F2C64F900009E1A08 /* SpecialModel.swift in Sources */,
+				CA9CB8952C6A5A9500E2AC48 /* MlbGameList.swift in Sources */,
+				CA9CB8892C6A591A00E2AC48 /* AllGames.swift in Sources */,
 				CA70931B2C651240009E1A08 /* ConnectivityRequestRetrier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

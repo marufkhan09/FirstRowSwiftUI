@@ -81,7 +81,7 @@ struct HomeView: View {
             .preferredColorScheme(settings.isDarkMode ? .dark : .light)
             .navigationDestination(isPresented: $isShowingGameList) {
                 if selectedGame != nil {
-                    GameListView(games: $games, selectedGame: $selectedGame).navigationBarBackButtonHidden()
+                    AllGames(games: $games, selectedGame: $selectedGame).navigationBarBackButtonHidden()
                 }
             }
         }
