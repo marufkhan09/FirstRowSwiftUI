@@ -33,9 +33,8 @@ struct HorizontalCalendar: View {
                     ForEach(dates, id: \.self) { date in
                         DateButton(date: date, isSelected: calendar.isDate(date, inSameDayAs: selectedDate)) {
                             selectedDate = date
-                            withAnimation {
-                                scrollToSelectedDate(proxy: proxy)
-                            }
+                            scrollToSelectedDate(proxy: proxy) // No animation here
+                            provideHapticFeedback()
                         }
                     }
                 }
@@ -52,11 +51,15 @@ struct HorizontalCalendar: View {
     
     private func scrollToSelectedDate(proxy: ScrollViewProxy) {
         let selectedIndex = dates.firstIndex(where: { calendar.isDate($0, inSameDayAs: selectedDate) }) ?? 0
-        withAnimation {
-            proxy.scrollTo(dates[selectedIndex], anchor: .center)
-        }
+        proxy.scrollTo(dates[selectedIndex], anchor: .center)
+    }
+    
+    private func provideHapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
 }
+
 
 struct HorizontalCalendar_Previews: PreviewProvider {
     static var previews: some View {
