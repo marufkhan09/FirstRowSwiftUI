@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CA0064ED2C690E100056D0BF /* mlbdatafile.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0064EC2C690E100056D0BF /* mlbdatafile.json */; };
-		CA1121762C68F7690037C762 /* MlbScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1121752C68F7690037C762 /* MlbScoreItem.swift */; };
 		CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */; };
 		CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */; };
 		CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8942C63A78C0067D2A5 /* ContentView.swift */; };
@@ -31,24 +30,16 @@
 		CA3D44362C63F10900995651 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44352C63F10900995651 /* AppSettings.swift */; };
 		CA3D44382C64082F00995651 /* navModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44372C64082F00995651 /* navModifier.swift */; };
 		CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443A2C640E3700995651 /* HorizontalCalenderView.swift */; };
-		CA3D443E2C6410B000995651 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443D2C6410B000995651 /* GameListView.swift */; };
 		CA3D44402C6415DC00995651 /* DateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D443F2C6415DC00995651 /* DateButton.swift */; };
-		CA3D44442C642C5900995651 /* ListBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D44432C642C5900995651 /* ListBack.swift */; };
 		CA70930F2C64F900009E1A08 /* SpecialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70930E2C64F900009E1A08 /* SpecialModel.swift */; };
 		CA7093122C65022C009E1A08 /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093112C65022C009E1A08 /* Interceptor.swift */; };
 		CA7093142C65026D009E1A08 /* BaseApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093132C65026D009E1A08 /* BaseApiController.swift */; };
 		CA7093172C650E14009E1A08 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CA7093162C650E14009E1A08 /* Alamofire */; };
-		CA7093192C650E14009E1A08 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CA7093182C650E14009E1A08 /* AlamofireDynamic */; };
 		CA70931B2C651240009E1A08 /* ConnectivityRequestRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931A2C651240009E1A08 /* ConnectivityRequestRetrier.swift */; };
 		CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */; };
 		CA7093212C6512DB009E1A08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7093202C6512DB009E1A08 /* String.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
-		CAD31CF92C67FA1E0069F300 /* HGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CF82C67FA1E0069F300 /* HGameView.swift */; };
-		CAD31CFC2C67FBC20069F300 /* MlbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFB2C67FBC20069F300 /* MlbView.swift */; };
 		CAD31CFE2C680A670069F300 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFD2C680A670069F300 /* Score.swift */; };
-		CAD31D022C680C7E0069F300 /* MlbGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31D012C680C7E0069F300 /* MlbGameList.swift */; };
-		CAD31D052C680EFE0069F300 /* MlbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31D042C680EFE0069F300 /* MlbViewModel.swift */; };
-		CAD31D082C681F890069F300 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31D072C681F890069F300 /* TeamView.swift */; };
 		CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1309C2C661AA0004EC139 /* Datum.swift */; };
 		CAE130B42C661AA1004EC139 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE130A12C661AA0004EC139 /* Total.swift */; };
 		CAE130B52C661AA1004EC139 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE130A22C661AA0004EC139 /* Line.swift */; };
@@ -77,7 +68,6 @@
 
 /* Begin PBXFileReference section */
 		CA0064EC2C690E100056D0BF /* mlbdatafile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mlbdatafile.json; sourceTree = "<group>"; };
-		CA1121752C68F7690037C762 /* MlbScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbScoreItem.swift; sourceTree = "<group>"; };
 		CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstRowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -103,9 +93,7 @@
 		CA3D44352C63F10900995651 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		CA3D44372C64082F00995651 /* navModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navModifier.swift; sourceTree = "<group>"; };
 		CA3D443A2C640E3700995651 /* HorizontalCalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalenderView.swift; sourceTree = "<group>"; };
-		CA3D443D2C6410B000995651 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		CA3D443F2C6415DC00995651 /* DateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateButton.swift; sourceTree = "<group>"; };
-		CA3D44432C642C5900995651 /* ListBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBack.swift; sourceTree = "<group>"; };
 		CA70930E2C64F900009E1A08 /* SpecialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialModel.swift; sourceTree = "<group>"; };
 		CA7093112C65022C009E1A08 /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		CA7093132C65026D009E1A08 /* BaseApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiController.swift; sourceTree = "<group>"; };
@@ -113,12 +101,7 @@
 		CA70931D2C65127D009E1A08 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
 		CA7093202C6512DB009E1A08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
-		CAD31CF82C67FA1E0069F300 /* HGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGameView.swift; sourceTree = "<group>"; };
-		CAD31CFB2C67FBC20069F300 /* MlbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbView.swift; sourceTree = "<group>"; };
 		CAD31CFD2C680A670069F300 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
-		CAD31D012C680C7E0069F300 /* MlbGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbGameList.swift; sourceTree = "<group>"; };
-		CAD31D042C680EFE0069F300 /* MlbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbViewModel.swift; sourceTree = "<group>"; };
-		CAD31D072C681F890069F300 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		CAE1309C2C661AA0004EC139 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
 		CAE130A12C661AA0004EC139 /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		CAE130A22C661AA0004EC139 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -134,7 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA7093172C650E14009E1A08 /* Alamofire in Frameworks */,
-				CA7093192C650E14009E1A08 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +140,6 @@
 		CA2A21A42C63CDBC007E98E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CA3D443C2C6410A100995651 /* Games */,
 				CA3D44392C640E2100995651 /* Calender */,
 				CA2AC8D22C63B15F0067D2A5 /* TabView */,
 				CA2AC8CF2C63B0D10067D2A5 /* Special */,
@@ -331,17 +312,6 @@
 			path = Calender;
 			sourceTree = "<group>";
 		};
-		CA3D443C2C6410A100995651 /* Games */ = {
-			isa = PBXGroup;
-			children = (
-				CAD31CFA2C67FBB40069F300 /* Sports */,
-				CA3D443D2C6410B000995651 /* GameListView.swift */,
-				CA3D44432C642C5900995651 /* ListBack.swift */,
-				CAD31CF82C67FA1E0069F300 /* HGameView.swift */,
-			);
-			path = Games;
-			sourceTree = "<group>";
-		};
 		CA7093102C650210009E1A08 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,34 +361,6 @@
 			path = MLBModel;
 			sourceTree = "<group>";
 		};
-		CAD31CFA2C67FBB40069F300 /* Sports */ = {
-			isa = PBXGroup;
-			children = (
-				CAD31D062C681F520069F300 /* View */,
-				CAD31D032C680EEB0069F300 /* MlbViewModel */,
-			);
-			path = Sports;
-			sourceTree = "<group>";
-		};
-		CAD31D032C680EEB0069F300 /* MlbViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				CAD31D042C680EFE0069F300 /* MlbViewModel.swift */,
-			);
-			path = MlbViewModel;
-			sourceTree = "<group>";
-		};
-		CAD31D062C681F520069F300 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CAD31CFB2C67FBC20069F300 /* MlbView.swift */,
-				CAD31D012C680C7E0069F300 /* MlbGameList.swift */,
-				CAD31D072C681F890069F300 /* TeamView.swift */,
-				CA1121752C68F7690037C762 /* MlbScoreItem.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,7 +379,6 @@
 			name = FirstRowSwiftUI;
 			packageProductDependencies = (
 				CA7093162C650E14009E1A08 /* Alamofire */,
-				CA7093182C650E14009E1A08 /* AlamofireDynamic */,
 			);
 			productName = FirstRowSwiftUI;
 			productReference = CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */;
@@ -560,10 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
-				CA3D44442C642C5900995651 /* ListBack.swift in Sources */,
-				CAD31CFC2C67FBC20069F300 /* MlbView.swift in Sources */,
 				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
-				CAD31D082C681F890069F300 /* TeamView.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
 				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
@@ -571,12 +509,10 @@
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
 				CAE130B52C661AA1004EC139 /* Line.swift in Sources */,
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
-				CA1121762C68F7690037C762 /* MlbScoreItem.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
 				CAE130B72C661AA1004EC139 /* Spread.swift in Sources */,
 				CA7093142C65026D009E1A08 /* BaseApiController.swift in Sources */,
 				CAD31CFE2C680A670069F300 /* Score.swift in Sources */,
-				CAD31D022C680C7E0069F300 /* MlbGameList.swift in Sources */,
 				CA3D44402C6415DC00995651 /* DateButton.swift in Sources */,
 				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
@@ -585,12 +521,9 @@
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
 				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
-				CA3D443E2C6410B000995651 /* GameListView.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
-				CAD31CF92C67FA1E0069F300 /* HGameView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
-				CAD31D052C680EFE0069F300 /* MlbViewModel.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
@@ -946,11 +879,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		CA7093182C650E14009E1A08 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CA7093152C650E12009E1A08 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
