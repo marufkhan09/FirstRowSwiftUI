@@ -14,16 +14,16 @@ struct AllGames: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack(alignment:.leading,spacing: 0) {
+            VStack(alignment:.center,spacing: 0) {
                 ZStack(alignment: .bottom) {
                     // Blue background
                     AssetNames.Colors.appbarColor
-                        .frame(width: geo.size.width, height: 75)
+                        .frame(width: geo.size.width, height: 80)
                     
                     // Black background with uneven corners
                     Color.black
                         .frame(width: geo.size.width, height: 55)
-                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 15, topTrailingRadius: 15))
+                        .clipShape(UnevenRoundedRectangle(topLeadingRadius: 20, topTrailingRadius: 20))
                     
                     // Horizontal ScrollView for games
                     HGameListView(games: $games, selectedGame: $selectedGame)
