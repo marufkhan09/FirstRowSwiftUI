@@ -46,6 +46,7 @@
 		CA9CB8972C6A5AA600E2AC48 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8962C6A5AA600E2AC48 /* TeamView.swift */; };
 		CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */; };
 		CA9CB89B2C6A5B5500E2AC48 /* MlbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */; };
+		CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
 		CAD31CFE2C680A670069F300 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFD2C680A670069F300 /* Score.swift */; };
 		CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1309C2C661AA0004EC139 /* Datum.swift */; };
@@ -116,6 +117,7 @@
 		CA9CB8962C6A5AA600E2AC48 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbScoreItem.swift; sourceTree = "<group>"; };
 		CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbViewModel.swift; sourceTree = "<group>"; };
+		CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDetail.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
 		CAD31CFD2C680A670069F300 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CAE1309C2C661AA0004EC139 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */,
+				CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				CAE130B52C661AA1004EC139 /* Line.swift in Sources */,
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
+				CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */,
 				CAE130B72C661AA1004EC139 /* Spread.swift in Sources */,
 				CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */,
 				CA7093142C65026D009E1A08 /* BaseApiController.swift in Sources */,

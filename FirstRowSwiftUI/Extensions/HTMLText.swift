@@ -10,16 +10,9 @@ import WebKit
 
 struct HTMLTextView: UIViewRepresentable {
     let htmlContent: String
-    let maxLines: Int
+    let maxLines: Int? // Make this optional to handle the case when it's not provided
     let fontSize: CGFloat
-    let paddingTop: CGFloat
-    let paddingRight: CGFloat
-    let paddingBottom: CGFloat
-    let paddingLeft: CGFloat
-    let marginTop: CGFloat
-    let marginRight: CGFloat
-    let marginBottom: CGFloat
-    let marginLeft: CGFloat
+    let colorString: String
     
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
@@ -32,6 +25,20 @@ struct HTMLTextView: UIViewRepresentable {
     }
     
     func updateUIView(_ webView: WKWebView, context: Context) {
+        // Determine the line clamp CSS if maxLines is provided
+        let lineClampCSS: String
+        if let maxLines = maxLines {
+            lineClampCSS = """
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: \(maxLines);
+            -webkit-box-orient: vertical;
+            """
+        } else {
+            lineClampCSS = "" // No line clamping, load full content
+        }
+        
         let htmlString = """
         <html>
         <head>
@@ -40,20 +47,8 @@ struct HTMLTextView: UIViewRepresentable {
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             font-size: \(fontSize)px;
-            color: white;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: \(maxLines);
-            -webkit-box-orient: vertical;
-            padding-top: \(paddingTop)px;
-            padding-right: \(paddingRight)px;
-            padding-bottom: \(paddingBottom)px;
-            padding-left: \(paddingLeft)px;
-            margin-top: \(marginTop)px;
-            margin-right: \(marginRight)px;
-            margin-bottom: \(marginBottom)px;
-            margin-left: \(marginLeft)px;
+            color: \(colorString);
+            \(lineClampCSS)
         }
         </style>
         </head>
@@ -65,3 +60,4 @@ struct HTMLTextView: UIViewRepresentable {
         webView.loadHTMLString(htmlString, baseURL: nil)
     }
 }
+

@@ -2,11 +2,11 @@ import Foundation
 
 // MARK: - SpecialModel
 struct SpecialModel: Codable {
-    let data: [Datum]
+    let data: [SpecialData]
 }
 
 // MARK: - Datum
-struct Datum: Codable, Identifiable {
+struct SpecialData: Codable, Identifiable {
     let id: Int
     let title, description, postedBy: String
     let image: String

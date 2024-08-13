@@ -70,21 +70,12 @@ struct SpecialView: View {
                                         HTMLTextView(
                                             htmlContent: datum.description,
                                             maxLines: 3,
-                                            fontSize: 14,
-                                            paddingTop: 0,
-                                            paddingRight: 0,
-                                            paddingBottom: 0,
-                                            paddingLeft: 0,
-                                            marginTop: 0,
-                                            marginRight: 0,
-                                            marginBottom: 0,
-                                            marginLeft: 0
+                                            fontSize: 16,
+                                            colorString: "white"
                                         )
                                         .frame(height: 60) // Adjust height based on your design
                                         
-                                        Button(action: {
-                                            // Navigate to the detail view of the tile
-                                        }) {
+                                        NavigationLink(destination: SpecialDetail(datum: datum).navigationBarBackButtonHidden()) {
                                             Text("See More")
                                                 .font(.subheadline)
                                                 .foregroundStyle(.white)
@@ -125,8 +116,6 @@ struct SpecialView: View {
             }
         }
         .onAppear {
-           // viewModel.fetchData() // Trigger the data fetching when the view appears
-            
             viewModel.fetchData()
         }
     }

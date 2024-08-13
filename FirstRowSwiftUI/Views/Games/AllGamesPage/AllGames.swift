@@ -11,7 +11,8 @@ struct AllGames: View {
     @Binding var games: [GamesModel]
     @Binding var selectedGame: GamesModel?
     @Environment(\.dismiss) private var dismiss
-    
+    @GestureState private var dragOffset: CGSize = .zero
+
     var body: some View {
         GeometryReader { geo in
             VStack(alignment:.center,spacing: 0) {
@@ -33,7 +34,6 @@ struct AllGames: View {
                 if let selectedGame = selectedGame {
                     if selectedGame.name == "MLB" {
                         MlbView()
-                      
                     } else {
                         Text("Selected Game: \(selectedGame.name)")
                             .font(.title)
@@ -55,7 +55,7 @@ struct AllGames: View {
                         Button {
                             dismiss()
                         } label: {
-                            Image(systemName: "chevron.left")
+                            Image(AssetNames.Images.arrowleft)
                                 .foregroundColor(.white)
                         }
                         Image(AssetNames.Images.statusBarLogo)
@@ -69,9 +69,21 @@ struct AllGames: View {
                 tintColor: nil,
                 withSeparator: false
             )
+            .gesture(
+                DragGesture()
+                    .updating($dragOffset, body: { (value, state, _) in
+                        state = value.translation
+                    })
+                    .onEnded { value in
+                        if value.startLocation.x < 50 && value.translation.width > 100 {
+                            dismiss()
+                        }
+                    }
+            )
         }
     }
 }
+
 
 #Preview {
     AllGames(

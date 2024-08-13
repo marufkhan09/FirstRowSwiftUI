@@ -1,7 +1,7 @@
 import Foundation
 
 class SpecialViewModel: ObservableObject {
-    @Published var specialData: [Datum] = []
+    @Published var specialData: [SpecialData] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
