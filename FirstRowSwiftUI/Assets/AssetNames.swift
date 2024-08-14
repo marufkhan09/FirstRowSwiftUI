@@ -40,6 +40,9 @@ struct AssetNames {
         static let secondaryColor = Color(hex:"#3063C5")
         static let appbarColor = Color(hex: "#1D3052")
         static let gameColor = Color(hex:"#0E1726")
+        static let gradColor = Color(hex: "#0E172600")
+
+       
        
         // Add other color names here
     }
