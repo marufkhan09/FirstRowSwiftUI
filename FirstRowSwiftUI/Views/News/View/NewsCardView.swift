@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct NewsCardView: View {
-    let item: NewsItem
+    let item: News
     let size: CardSize
 
     var body: some View {
-        NavigationLink(destination: NewsDetailView(url: URL(string: item.url ?? "")!).navigationBarBackButtonHidden()) {
+        NavigationLink(destination: NewsDetailView(url: URL(string: item.url ?? "")!, title: item.title ?? "").navigationBarBackButtonHidden()) {
             ZStack(alignment: .bottom) {
                 // Background Image
                 AsyncImage(url: URL(string: item.image!)) { image in

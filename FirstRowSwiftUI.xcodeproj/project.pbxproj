@@ -48,7 +48,10 @@
 		CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */; };
 		CAA8B6272C72899A00C55743 /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B6262C72899A00C55743 /* NewsCardView.swift */; };
 		CAA8B6292C728A0B00C55743 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */; };
-		CAB1D15A2C6D3581001D94EB /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1592C6D3581001D94EB /* NewsItem.swift */; };
+		CAA8B62D2C72968700C55743 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B62C2C72968700C55743 /* NewsViewModel.swift */; };
+		CAA8B6302C7297F400C55743 /* NbaNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B62F2C7297F400C55743 /* NbaNews.swift */; };
+		CAA8B6322C72984400C55743 /* NewsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B6312C72984400C55743 /* NewsSource.swift */; };
+		CAB1D15A2C6D3581001D94EB /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1592C6D3581001D94EB /* News.swift */; };
 		CAB1D1642C6D63E9001D94EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1632C6D63E9001D94EB /* NewsView.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
 		CAD31CFE2C680A670069F300 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFD2C680A670069F300 /* Score.swift */; };
@@ -122,7 +125,10 @@
 		CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDetail.swift; sourceTree = "<group>"; };
 		CAA8B6262C72899A00C55743 /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
 		CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
-		CAB1D1592C6D3581001D94EB /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		CAA8B62C2C72968700C55743 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CAA8B62F2C7297F400C55743 /* NbaNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaNews.swift; sourceTree = "<group>"; };
+		CAA8B6312C72984400C55743 /* NewsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSource.swift; sourceTree = "<group>"; };
+		CAB1D1592C6D3581001D94EB /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		CAB1D1632C6D63E9001D94EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
 		CAD31CFD2C680A670069F300 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		CA2A21A62C63CDDB007E98E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAA8B62E2C7297DC00C55743 /* New Group */,
 				CAB1D1582C6D3570001D94EB /* NewsModel */,
 				CAC2F4C52C65749900EB8107 /* MLBModel */,
 				CAC2F4BA2C65458900EB8107 /* SpecialModel */,
@@ -278,9 +285,8 @@
 		CA2AC8C92C63B0590067D2A5 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				CAB1D1632C6D63E9001D94EB /* NewsView.swift */,
-				CAA8B6262C72899A00C55743 /* NewsCardView.swift */,
-				CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */,
+				CAA8B62B2C72967400C55743 /* ViewModel */,
+				CAA8B62A2C72966300C55743 /* View */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -422,10 +428,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CAA8B62A2C72966300C55743 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAB1D1632C6D63E9001D94EB /* NewsView.swift */,
+				CAA8B6262C72899A00C55743 /* NewsCardView.swift */,
+				CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAA8B62B2C72967400C55743 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CAA8B62C2C72968700C55743 /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CAA8B62E2C7297DC00C55743 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CAB1D1582C6D3570001D94EB /* NewsModel */ = {
 			isa = PBXGroup;
 			children = (
-				CAB1D1592C6D3581001D94EB /* NewsItem.swift */,
+				CAB1D1592C6D3581001D94EB /* News.swift */,
+				CAA8B62F2C7297F400C55743 /* NbaNews.swift */,
+				CAA8B6312C72984400C55743 /* NewsSource.swift */,
 			);
 			path = NewsModel;
 			sourceTree = "<group>";
@@ -604,7 +637,7 @@
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
 				CAA8B6272C72899A00C55743 /* NewsCardView.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
-				CAB1D15A2C6D3581001D94EB /* NewsItem.swift in Sources */,
+				CAB1D15A2C6D3581001D94EB /* News.swift in Sources */,
 				CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */,
 				CAE130B72C661AA1004EC139 /* Spread.swift in Sources */,
 				CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */,
@@ -615,6 +648,7 @@
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
 				CA7093122C65022C009E1A08 /* Interceptor.swift in Sources */,
 				CAE130C12C661AA1004EC139 /* TeamsNormalized.swift in Sources */,
+				CAA8B6302C7297F400C55743 /* NbaNews.swift in Sources */,
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
 				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
@@ -631,6 +665,8 @@
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
 				CAE130BF2C661AA1004EC139 /* Moneyline.swift in Sources */,
 				CAE130BC2C661AA1004EC139 /* MlbModel.swift in Sources */,
+				CAA8B62D2C72968700C55743 /* NewsViewModel.swift in Sources */,
+				CAA8B6322C72984400C55743 /* NewsSource.swift in Sources */,
 				CA70930F2C64F900009E1A08 /* SpecialModel.swift in Sources */,
 				CA9CB8952C6A5A9500E2AC48 /* MlbGameList.swift in Sources */,
 				CA9CB8892C6A591A00E2AC48 /* AllGames.swift in Sources */,
