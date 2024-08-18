@@ -20,7 +20,6 @@
 		CA2AC8C02C63A98D0067D2A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2AC8BF2C63A98D0067D2A5 /* Launch Screen.storyboard */; };
 		CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8C22C63AA020067D2A5 /* AssetNames.swift */; };
 		CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8C72C63B0520067D2A5 /* HomeView.swift */; };
-		CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8CA2C63B0660067D2A5 /* NewsView.swift */; };
 		CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8CD2C63B0CD0067D2A5 /* ChatView.swift */; };
 		CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */; };
 		CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D32C63B16C0067D2A5 /* TabBarView.swift */; };
@@ -47,12 +46,10 @@
 		CA9CB8992C6A5AAF00E2AC48 /* MlbScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */; };
 		CA9CB89B2C6A5B5500E2AC48 /* MlbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */; };
 		CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */; };
+		CAA8B6272C72899A00C55743 /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B6262C72899A00C55743 /* NewsCardView.swift */; };
+		CAA8B6292C728A0B00C55743 /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */; };
 		CAB1D15A2C6D3581001D94EB /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1592C6D3581001D94EB /* NewsItem.swift */; };
-		CAB1D15C2C6D410C001D94EB /* FullWidthImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D15B2C6D410C001D94EB /* FullWidthImageView.swift */; };
-		CAB1D15E2C6D4155001D94EB /* SideBySideNewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D15D2C6D4155001D94EB /* SideBySideNewsCardView.swift */; };
-		CAB1D1602C6D4176001D94EB /* HalfWidthWithTwoNewsCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D15F2C6D4176001D94EB /* HalfWidthWithTwoNewsCardsView.swift */; };
-		CAB1D1622C6D4AE0001D94EB /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1612C6D4AE0001D94EB /* NewsCardView.swift */; };
-		CAB1D1642C6D63E9001D94EB /* StaticGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1632C6D63E9001D94EB /* StaticGrid.swift */; };
+		CAB1D1642C6D63E9001D94EB /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB1D1632C6D63E9001D94EB /* NewsView.swift */; };
 		CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */; };
 		CAD31CFE2C680A670069F300 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD31CFD2C680A670069F300 /* Score.swift */; };
 		CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1309C2C661AA0004EC139 /* Datum.swift */; };
@@ -98,7 +95,6 @@
 		CA2AC8BF2C63A98D0067D2A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CA2AC8C22C63AA020067D2A5 /* AssetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNames.swift; sourceTree = "<group>"; };
 		CA2AC8C72C63B0520067D2A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CA2AC8CA2C63B0660067D2A5 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CA2AC8CD2C63B0CD0067D2A5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialView.swift; sourceTree = "<group>"; };
 		CA2AC8D32C63B16C0067D2A5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -124,12 +120,10 @@
 		CA9CB8982C6A5AAF00E2AC48 /* MlbScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbScoreItem.swift; sourceTree = "<group>"; };
 		CA9CB89A2C6A5B5500E2AC48 /* MlbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MlbViewModel.swift; sourceTree = "<group>"; };
 		CA9CB89E2C6A93C200E2AC48 /* SpecialDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialDetail.swift; sourceTree = "<group>"; };
+		CAA8B6262C72899A00C55743 /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
+		CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		CAB1D1592C6D3581001D94EB /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		CAB1D15B2C6D410C001D94EB /* FullWidthImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidthImageView.swift; sourceTree = "<group>"; };
-		CAB1D15D2C6D4155001D94EB /* SideBySideNewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBySideNewsCardView.swift; sourceTree = "<group>"; };
-		CAB1D15F2C6D4176001D94EB /* HalfWidthWithTwoNewsCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfWidthWithTwoNewsCardsView.swift; sourceTree = "<group>"; };
-		CAB1D1612C6D4AE0001D94EB /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
-		CAB1D1632C6D63E9001D94EB /* StaticGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGrid.swift; sourceTree = "<group>"; };
+		CAB1D1632C6D63E9001D94EB /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		CAC2F4BF2C654B7E00EB8107 /* HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLText.swift; sourceTree = "<group>"; };
 		CAD31CFD2C680A670069F300 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		CAE1309C2C661AA0004EC139 /* Datum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datum.swift; sourceTree = "<group>"; };
@@ -284,12 +278,9 @@
 		CA2AC8C92C63B0590067D2A5 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				CA2AC8CA2C63B0660067D2A5 /* NewsView.swift */,
-				CAB1D15B2C6D410C001D94EB /* FullWidthImageView.swift */,
-				CAB1D15D2C6D4155001D94EB /* SideBySideNewsCardView.swift */,
-				CAB1D15F2C6D4176001D94EB /* HalfWidthWithTwoNewsCardsView.swift */,
-				CAB1D1612C6D4AE0001D94EB /* NewsCardView.swift */,
-				CAB1D1632C6D63E9001D94EB /* StaticGrid.swift */,
+				CAB1D1632C6D63E9001D94EB /* NewsView.swift */,
+				CAA8B6262C72899A00C55743 /* NewsCardView.swift */,
+				CAA8B6282C728A0B00C55743 /* NewsDetailView.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -601,17 +592,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB1D1622C6D4AE0001D94EB /* NewsCardView.swift in Sources */,
 				CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */,
 				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
-				CAB1D15C2C6D410C001D94EB /* FullWidthImageView.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
 				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
 				CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */,
+				CAA8B6292C728A0B00C55743 /* NewsDetailView.swift in Sources */,
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
 				CAE130B52C661AA1004EC139 /* Line.swift in Sources */,
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
+				CAA8B6272C72899A00C55743 /* NewsCardView.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
 				CAB1D15A2C6D3581001D94EB /* NewsItem.swift in Sources */,
 				CA9CB89F2C6A93C200E2AC48 /* SpecialDetail.swift in Sources */,
@@ -621,24 +612,21 @@
 				CAD31CFE2C680A670069F300 /* Score.swift in Sources */,
 				CA9CB8932C6A5A7D00E2AC48 /* MlbView.swift in Sources */,
 				CA3D44402C6415DC00995651 /* DateButton.swift in Sources */,
-				CA2AC8CB2C63B0660067D2A5 /* NewsView.swift in Sources */,
 				CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */,
 				CA7093122C65022C009E1A08 /* Interceptor.swift in Sources */,
 				CAE130C12C661AA1004EC139 /* TeamsNormalized.swift in Sources */,
 				CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */,
 				CA3D443B2C640E3700995651 /* HorizontalCalenderView.swift in Sources */,
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
-				CAB1D1602C6D4176001D94EB /* HalfWidthWithTwoNewsCardsView.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
 				CA9CB88D2C6A597700E2AC48 /* ListBackgroundView.swift in Sources */,
 				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
 				CA9CB88B2C6A594900E2AC48 /* HGameListView.swift in Sources */,
 				CA9CB8972C6A5AA600E2AC48 /* TeamView.swift in Sources */,
-				CAB1D15E2C6D4155001D94EB /* SideBySideNewsCardView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,
 				CA9CB89B2C6A5B5500E2AC48 /* MlbViewModel.swift in Sources */,
 				CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */,
-				CAB1D1642C6D63E9001D94EB /* StaticGrid.swift in Sources */,
+				CAB1D1642C6D63E9001D94EB /* NewsView.swift in Sources */,
 				CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */,
 				CA2AC8D92C63C0D40067D2A5 /* TabModel.swift in Sources */,
 				CAE130BF2C661AA1004EC139 /* Moneyline.swift in Sources */,

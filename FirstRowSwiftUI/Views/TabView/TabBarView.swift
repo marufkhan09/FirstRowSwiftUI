@@ -23,7 +23,7 @@ struct TabViiew: View {
             if selectedTab == 0 {
                 HomeView()
             } else if selectedTab == 1 {
-                DynamicGrid(items: [])
+                NewsView()
             } else if selectedTab == 2 {
                 ChatView()
             } else {

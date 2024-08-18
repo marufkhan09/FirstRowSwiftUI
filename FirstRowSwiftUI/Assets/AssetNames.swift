@@ -32,6 +32,7 @@ struct AssetNames {
         static let fifa = "fifa"
         static let bundesliga = "bundesliga"
         static let arrowleft = "arrowleft"
+        static let send = "send"
         // Add other image names here
     }
 
