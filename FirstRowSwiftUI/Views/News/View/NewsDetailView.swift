@@ -10,16 +10,15 @@ struct NewsDetailView: View {
     @State private var progress: Double = 0.0
 
     var body: some View {
-        VStack {
+        ZStack {
             if progress < 1.0 {
                 ProgressView(value: progress, total: 1.0)
-                    .progressViewStyle(LinearProgressViewStyle())
+                    .progressViewStyle(CircularProgressViewStyle())
                     .padding()
                     .accentColor(.blue)
-            } else {
-                WebView(url: url, progress: $progress)
-                    .edgesIgnoringSafeArea(.all)
             }
+            WebView(url: url, progress: $progress)
+                .edgesIgnoringSafeArea(.all)
         }
         .navigationTitle(title)
         .toolbar {
@@ -27,7 +26,7 @@ struct NewsDetailView: View {
                 Button {
                     dismiss()
                 } label: {
-                    Image(AssetNames.Images.arrowleft)
+                    Image(systemName: "arrow.left")
                         .foregroundColor(.white)
                 }
             }
@@ -98,12 +97,14 @@ struct WebView: UIViewRepresentable {
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
             DispatchQueue.main.async {
                 self.parent.progress = 1.0
+                print("WebView did finish loading")
             }
         }
 
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             DispatchQueue.main.async {
                 self.parent.progress = 1.0
+                print("WebView failed with error: \(error.localizedDescription)")
             }
         }
     }
@@ -111,7 +112,7 @@ struct WebView: UIViewRepresentable {
 
 #Preview {
     NavigationStack {
-        NewsDetailView(url: URL(string: "https://facebook.com")!, title: "Example News")
+        NewsDetailView(url: URL(string: "https://www.example.com")!, title: "Example News")
             .environmentObject(AppSettings())
     }
 }
