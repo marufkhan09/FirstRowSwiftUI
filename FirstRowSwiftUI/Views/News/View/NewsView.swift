@@ -5,77 +5,74 @@ struct NewsView: View {
     @EnvironmentObject var settings: AppSettings
     @StateObject private var viewModel = NewsViewModel()
     
-
+    
     private let pattern: [CardSize] = [.full, .hhalf, .full, .vhhalf]
-
+    
     
     var body: some View {
         NavigationView {  // Add a NavigationView here
-            ScrollView {
-                
-                
+            ScrollView { 
+                if viewModel.isLoading {
                     
-                    if viewModel.isLoading {
-                       
-                        ProgressView("Loading...")
-                            .progressViewStyle(CircularProgressViewStyle())
-                            .frame(maxWidth: .infinity, maxHeight: .infinity).padding(.top)
-                    }
-                    else if !viewModel.nbaNewsList.isEmpty {
-                        LazyVStack(spacing: 2) {
-                            ForEach(0..<itemGroups.count, id: \.self) { index in
-                                let itemGroup = itemGroups[index]
+                    ProgressView("Loading...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .frame(maxWidth: .infinity, maxHeight: .infinity).padding(.top)
+                }
+                else if !viewModel.nbaNewsList.isEmpty {
+                    LazyVStack(spacing: 2) {
+                        ForEach(0..<itemGroups.count, id: \.self) { index in
+                            let itemGroup = itemGroups[index]
+                            
+                            switch itemGroup.size {
+                            case .full:
+                                NewsCardView(item: itemGroup.items[0], size: .full)
+                                    .frame(maxWidth: .infinity)
+                                    .clipped()
                                 
-                                switch itemGroup.size {
-                                case .full:
-                                    NewsCardView(item: itemGroup.items[0], size: .full)
-                                        .frame(maxWidth: .infinity)
+                            case .hhalf:
+                                HStack(spacing: 2) {
+                                    NewsCardView(item: itemGroup.items[0], size: .hhalf)
                                         .clipped()
                                     
-                                case .hhalf:
-                                    HStack(spacing: 2) {
-                                        NewsCardView(item: itemGroup.items[0], size: .hhalf)
+                                    if itemGroup.items.count > 1 {
+                                        NewsCardView(item: itemGroup.items[1], size: .hhalf)
                                             .clipped()
-                                        
-                                        if itemGroup.items.count > 1 {
-                                            NewsCardView(item: itemGroup.items[1], size: .hhalf)
-                                                .clipped()
-                                        }
+                                    }
+                                }
+                                
+                            case .vhhalf:
+                                HStack(spacing: 2) {
+                                    if itemGroup.items.count > 0 {
+                                        NewsCardView(item: itemGroup.items[0], size: .vhhalf)
+                                            .frame(width: UIScreen.main.bounds.width / 2, height: 240)
+                                            .clipped()
                                     }
                                     
-                                case .vhhalf:
-                                    HStack(spacing: 2) {
-                                        if itemGroup.items.count > 0 {
-                                            NewsCardView(item: itemGroup.items[0], size: .vhhalf)
-                                                .frame(width: UIScreen.main.bounds.width / 2, height: 240)
+                                    VStack(spacing: 2) {
+                                        if itemGroup.items.count > 1 {
+                                            NewsCardView(item: itemGroup.items[1], size: .vhhalf)
+                                                .frame(width: UIScreen.main.bounds.width / 2, height: 120)
                                                 .clipped()
                                         }
                                         
-                                        VStack(spacing: 2) {
-                                            if itemGroup.items.count > 1 {
-                                                NewsCardView(item: itemGroup.items[1], size: .vhhalf)
-                                                    .frame(width: UIScreen.main.bounds.width / 2, height: 120)
-                                                    .clipped()
-                                            }
-                                            
-                                            if itemGroup.items.count > 2 {
-                                                NewsCardView(item: itemGroup.items[2], size: .vhhalf)
-                                                    .frame(width: UIScreen.main.bounds.width / 2, height: 120)
-                                                    .clipped()
-                                            }
+                                        if itemGroup.items.count > 2 {
+                                            NewsCardView(item: itemGroup.items[2], size: .vhhalf)
+                                                .frame(width: UIScreen.main.bounds.width / 2, height: 120)
+                                                .clipped()
                                         }
                                     }
                                 }
                             }
                         }
-                    } else {
-                        Text("No data available")
-                            .foregroundStyle(.white)
-                            .padding(.top)
-                            .frame(maxWidth: .infinity, alignment: .center)
                     }
+                } else {
+                    Text("No data available")
+                        .foregroundStyle(.white)
+                        .padding(.top)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
                 
-               
+                
             }
             .scrollIndicators(.hidden)
             .toolbar {
@@ -95,12 +92,12 @@ struct NewsView: View {
             }
         }
     }
-
+    
     // Computed property to group items according to the pattern
     private var itemGroups: [(size: CardSize, items: [News])] {
         var result: [(size: CardSize, items: [News])] = []
         var index = 0
-
+        
         while index < viewModel.nbaNewsList.count {
             let patternIndex = result.count % pattern.count
             let cardSize = pattern[patternIndex]
@@ -127,7 +124,7 @@ struct NewsView: View {
                 }
             }
         }
-
+        
         return result
     }
 }

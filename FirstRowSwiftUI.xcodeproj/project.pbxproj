@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CA0064ED2C690E100056D0BF /* mlbdatafile.json in Resources */ = {isa = PBXBuildFile; fileRef = CA0064EC2C690E100056D0BF /* mlbdatafile.json */; };
+		CA2654DB2C776E3B0018E3E5 /* ChatSegmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2654DA2C776E3B0018E3E5 /* ChatSegmentModel.swift */; };
+		CA2654DD2C776FDB0018E3E5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2654DC2C776FDB0018E3E5 /* ChatView.swift */; };
 		CA2A21A82C63CDF1007E98E7 /* GamesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */; };
 		CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */; };
 		CA2AC8952C63A78C0067D2A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8942C63A78C0067D2A5 /* ContentView.swift */; };
@@ -20,7 +22,7 @@
 		CA2AC8C02C63A98D0067D2A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2AC8BF2C63A98D0067D2A5 /* Launch Screen.storyboard */; };
 		CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8C22C63AA020067D2A5 /* AssetNames.swift */; };
 		CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8C72C63B0520067D2A5 /* HomeView.swift */; };
-		CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8CD2C63B0CD0067D2A5 /* ChatView.swift */; };
+		CA2AC8CE2C63B0CD0067D2A5 /* ChatSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8CD2C63B0CD0067D2A5 /* ChatSegmentView.swift */; };
 		CA2AC8D12C63B0DF0067D2A5 /* SpecialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */; };
 		CA2AC8D42C63B16C0067D2A5 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D32C63B16C0067D2A5 /* TabBarView.swift */; };
 		CA2AC8D72C63B6B40067D2A5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2AC8D62C63B6B40067D2A5 /* Color.swift */; };
@@ -83,6 +85,8 @@
 
 /* Begin PBXFileReference section */
 		CA0064EC2C690E100056D0BF /* mlbdatafile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mlbdatafile.json; sourceTree = "<group>"; };
+		CA2654DA2C776E3B0018E3E5 /* ChatSegmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSegmentModel.swift; sourceTree = "<group>"; };
+		CA2654DC2C776FDB0018E3E5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		CA2A21A72C63CDF1007E98E7 /* GamesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesModel.swift; sourceTree = "<group>"; };
 		CA2AC88F2C63A78C0067D2A5 /* FirstRowSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstRowSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2AC8922C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -98,7 +102,7 @@
 		CA2AC8BF2C63A98D0067D2A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CA2AC8C22C63AA020067D2A5 /* AssetNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNames.swift; sourceTree = "<group>"; };
 		CA2AC8C72C63B0520067D2A5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CA2AC8CD2C63B0CD0067D2A5 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		CA2AC8CD2C63B0CD0067D2A5 /* ChatSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSegmentView.swift; sourceTree = "<group>"; };
 		CA2AC8D02C63B0DF0067D2A5 /* SpecialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialView.swift; sourceTree = "<group>"; };
 		CA2AC8D32C63B16C0067D2A5 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CA2AC8D62C63B6B40067D2A5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -167,6 +171,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA2654D92C776E0B0018E3E5 /* ChatModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA2654DA2C776E3B0018E3E5 /* ChatSegmentModel.swift */,
+			);
+			path = ChatModel;
+			sourceTree = "<group>";
+		};
 		CA2A21A42C63CDBC007E98E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +196,7 @@
 		CA2A21A62C63CDDB007E98E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CAA8B62E2C7297DC00C55743 /* New Group */,
+				CA2654D92C776E0B0018E3E5 /* ChatModel */,
 				CAB1D1582C6D3570001D94EB /* NewsModel */,
 				CAC2F4C52C65749900EB8107 /* MLBModel */,
 				CAC2F4BA2C65458900EB8107 /* SpecialModel */,
@@ -294,7 +306,8 @@
 		CA2AC8CC2C63B06B0067D2A5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				CA2AC8CD2C63B0CD0067D2A5 /* ChatView.swift */,
+				CA2AC8CD2C63B0CD0067D2A5 /* ChatSegmentView.swift */,
+				CA2654DC2C776FDB0018E3E5 /* ChatView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -444,13 +457,6 @@
 				CAA8B62C2C72968700C55743 /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CAA8B62E2C7297DC00C55743 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CAB1D1582C6D3570001D94EB /* NewsModel */ = {
@@ -629,12 +635,14 @@
 				CAC2F4C02C654B7E00EB8107 /* HTMLText.swift in Sources */,
 				CA2AC8C82C63B0520067D2A5 /* HomeView.swift in Sources */,
 				CA3D44382C64082F00995651 /* navModifier.swift in Sources */,
+				CA2654DD2C776FDB0018E3E5 /* ChatView.swift in Sources */,
 				CA3D44362C63F10900995651 /* AppSettings.swift in Sources */,
 				CA2AC8932C63A78C0067D2A5 /* FirstRowSwiftUIApp.swift in Sources */,
 				CAA8B6292C728A0B00C55743 /* NewsDetailView.swift in Sources */,
 				CA2AC8DB2C63C0F00067D2A5 /* CustomTabBar.swift in Sources */,
 				CAE130B52C661AA1004EC139 /* Line.swift in Sources */,
 				CAE130B42C661AA1004EC139 /* Total.swift in Sources */,
+				CA2654DB2C776E3B0018E3E5 /* ChatSegmentModel.swift in Sources */,
 				CAA8B6272C72899A00C55743 /* NewsCardView.swift in Sources */,
 				CAE130AF2C661AA1004EC139 /* Datum.swift in Sources */,
 				CAB1D15A2C6D3581001D94EB /* News.swift in Sources */,
@@ -654,7 +662,7 @@
 				CA70931E2C65127D009E1A08 /* SpecialViewModel.swift in Sources */,
 				CA7093212C6512DB009E1A08 /* String.swift in Sources */,
 				CA9CB88D2C6A597700E2AC48 /* ListBackgroundView.swift in Sources */,
-				CA2AC8CE2C63B0CD0067D2A5 /* ChatView.swift in Sources */,
+				CA2AC8CE2C63B0CD0067D2A5 /* ChatSegmentView.swift in Sources */,
 				CA9CB88B2C6A594900E2AC48 /* HGameListView.swift in Sources */,
 				CA9CB8972C6A5AA600E2AC48 /* TeamView.swift in Sources */,
 				CA2AC8C32C63AA020067D2A5 /* AssetNames.swift in Sources */,

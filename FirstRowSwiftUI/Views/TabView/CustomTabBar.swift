@@ -23,7 +23,7 @@ struct CustomTabBar: View {
                             .renderingMode(.template)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: selectedTab == item.tag ? 28 : 22, height: selectedTab == item.tag ? 28 : 22) // Larger size when selected
+                            .frame(width: selectedTab == item.tag ? 24 : 22, height: selectedTab == item.tag ? 24 : 22) // Larger size when selected
                             .foregroundColor(selectedTab == item.tag ? Color(AssetNames.Colors.secondaryColor) : Color.gray)
                             .scaleEffect(selectedTab == item.tag ? 1.2 : 1.0) // Animation for scaling effect
 
