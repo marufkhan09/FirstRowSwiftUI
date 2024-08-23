@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct TabViiew: View {
+struct CustomTabView: View {
     @State private var selectedTab: Int = 0
+    
 
     let tabBarItems = [
         TabBarItem(icon: AssetNames.Images.home, title: "Home", tag: 0),
@@ -18,27 +19,31 @@ struct TabViiew: View {
     ]
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             // Main content views
-            if selectedTab == 0 {
-                HomeView()
-            } else if selectedTab == 1 {
-                NewsView()
-            } else if selectedTab == 2 {
-                ChatView()
-            } else {
-                SpecialView()
+            Group {
+                if selectedTab == 0 {
+                    HomeView()
+                } else if selectedTab == 1 {
+                    NewsView()
+                } else if selectedTab == 2 {
+                    ChatRedesign()
+                } else {
+                    SpecialView()
+                }
             }
-
-            Spacer()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.white) // Background for content area
 
             // Custom Tab Bar
             CustomTabBar(selectedTab: $selectedTab, items: tabBarItems)
+                .background(Color.white) // Background color of the tab bar
         }
         .edgesIgnoringSafeArea(.bottom)
     }
 }
 
+
 #Preview {
-    TabViiew().environmentObject(AppSettings())
+    CustomTabView().environmentObject(AppSettings())
 }

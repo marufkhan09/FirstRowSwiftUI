@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  ChatSegmentView.swift
 //  FirstRowSwiftUI
 //
 //  Created by Maruf Khan on 7/8/24.
@@ -9,6 +9,7 @@ import SwiftUI
 struct ChatSegmentView: View {
     @Binding var selectedSegment: Int
     let segments: [ChatSegmentModel]
+    @EnvironmentObject var settings: AppSettings
     
     @Namespace private var namespace // Declare the namespace here
 
@@ -17,13 +18,13 @@ struct ChatSegmentView: View {
             ScrollViewReader { proxy in
                 HStack(spacing: 16) {
                     ForEach(segments) { segment in
-                        VStack {
+                        VStack(spacing:0) {
                             Text(segment.title)
-                                .font(.title2)
+                                .font(.title2).fontWeight(selectedSegment == segment.id ?.semibold: .regular)
                                 .padding(.horizontal)
                                 .padding(.vertical, 8)
                                 .background(Color.clear) // Transparent background
-                                .foregroundColor(selectedSegment == segment.id ? .primary : .gray)
+                                .foregroundColor(selectedSegment == segment.id ? AssetNames.Colors.secondaryColor : .gray)
                             
                             // Bottom underline
                             if selectedSegment == segment.id {
@@ -47,10 +48,12 @@ struct ChatSegmentView: View {
                 }
                 .padding(.horizontal,8)
             }
-        }
+           
+        }.preferredColorScheme(settings.isDarkMode ? .dark : .light)
+            .background(Color(UIColor.systemBackground))
     }
 }
 
 #Preview {
-    ChatView()
+    ChatRedesign().environmentObject(AppSettings())
 }
